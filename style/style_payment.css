@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: white;
+    background-color: #1C0E2F;
+}
+
+.container{
+    padding: 10px 50px;
+    display: grid;
+    grid-template-columns: 60% 35%;
+    grid-gap: 30px;
+    
+}
+
+.card{
+    background-color: #2E1452;
+    border-radius: 10px;
+    padding: 20px;
+    /* width: 65%; */
+    margin-top: 30px;
+}
+
+input, select{
+    display: inline-block;
+    width: 100%;
+    padding: 8px 10px;
+    margin: 10px 0 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+}
+
+input[name="norek"]{
+    width: 70%;
+}
+
+select{
+width: 29%;
+}
+
+input[type="submit"]{
+    margin: 15px 0;
+}
+
+.btn{
+    display: inline-block;
+    background-color: #E6CC00;
+    color: #2E1452;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+aside{
+    /* position: absolute;
+    top: 30px;
+    right: 70px;
+    width: 35%; */
+
+}
+
+.side{
+    background-color: #2E1452;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px 0;
+    overflow: hidden;
+}
+
+.title{
+    font-size: 18px;
+}
+
+.summary{
+    display: grid;
+    grid-template-columns: auto 10px;
+}
+
+.total-pay {
+    margin: 30px -8% -8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2E1452;
+    font-size: 18px;
+    box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.2);;
+    padding: 10px 30px 15px;
+}
+
