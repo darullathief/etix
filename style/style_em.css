@@ -57,6 +57,46 @@ aside a:hover{
 
 .event{
     margin: 30px;
+    padding: 10px 30px;
     background-color: #2E1452;
     border-radius: 10px;
+}
+
+table{
+    width: 100%;
+    margin: auto;
+    background-color: #3D1C6A;
+    border-radius: 10px;
+    border: 1px solid #1C0E2F;
+    border-collapse: separate;
+    padding: 8px 5px;
+    text-align: left;
+}
+
+tr{
+    border: 1px solid #1C0E2F;
+}
+
+td,th{
+    padding: 15px 5px 15px 10px;
+}
+
+td:last-child{
+    width: 75px;
+}
+.btn{
+    display: inline-block;
+    background-color: #E6CC00;
+    color: #2E1452;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.btn-del{
+    background-color: red;
 }
