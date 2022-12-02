@@ -59,3 +59,14 @@ input[type=text] {
     display: block;
     margin:auto;
   }
+
+input[type=submit] {
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 0 10px 0;
+    border:none;
+    display: block;
+    position:relative;
+    top: -50px;
+    left: 650px;
+}
