@@ -68,8 +68,8 @@ input[type=submit] {
     border:none;
     display: block;
     position:relative;
-    top: -50px;
-    left: 650px;
+    top: -42px;
+    left: 985px;
 }
 
 .videoyt{
@@ -104,4 +104,35 @@ input[type=submit] {
 .tulisangambar1 img{
     width: 344px;
     height: 213;
+    border-radius: 10px;
+}
+
+.tulisan1{
+    text-align: center;
+    margin-top: 60px ;
+    font-size: 20px ;
+}
+
+.imgcard{
+    width : 200px;
+    border-radius: 15px;
+}
+
+.card{
+    width: 200px;
+    margin: 50px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 15px ;
+    padding: 10px 10px 10px;
+}
+
+.intro{
+    color: #2E1452;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
 }
