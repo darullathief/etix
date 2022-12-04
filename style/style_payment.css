@@ -27,7 +27,7 @@ input, select{
     display: inline-block;
     width: 100%;
     padding: 8px 10px;
-    margin: 10px 0 0;
+    margin: 20px 0 0;
     box-sizing: border-box;
     border: none;
     border-radius: 5px;
@@ -42,7 +42,7 @@ width: 29%;
 }
 
 input[type="submit"]{
-    margin: 15px 0;
+    margin: 24px 0 0;
 }
 
 .btn{
@@ -51,7 +51,7 @@ input[type="submit"]{
     color: #2E1452;
     text-decoration: none;
     font-weight: bold;
-    
+
 }
 
 /*.aside{
@@ -71,12 +71,13 @@ input[type="submit"]{
 }
 
 .title{
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .summary{
     display: grid;
     grid-template-columns: auto 10px;
+    margin-top: 0;
 }
 
 .total-pay {
@@ -90,3 +91,23 @@ input[type="submit"]{
     padding: 10px 30px 15px;
 }
 
+.fileup{
+    display: block;
+    background-color: white;
+    color: #2E1452;
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.fileup p {
+    margin: 0;
+    font-weight: bold;
+}
+input[type=file]{
+    display: inline-block;
+    width: 100%;
+    border: 1px solid black;
+}
