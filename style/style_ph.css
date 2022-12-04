@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: white;
+    background-color: #1C0E2F;
+}
+
+nav{
+    position: fixed;
+    background-color: #2E1452;
+    top: 0;
+    z-index: 99;
+    height: 50px;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+nav .logo {
+    width: 70px;
+    margin: 0 30px;
+}
+
+.container{
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: 300px auto;
+}
+
+aside{
+    background-color: #2E1452;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+aside ul{
+    padding-left: 0;
+}
+aside li{
+    list-style: none;
+    margin: 10px 0;
+    width: 100%;
+}
+
+aside a{
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    color: white;
+    padding: 15px;
+}
+
+aside a:hover{
+    background-color: #1C0E2F;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+.profile div{
+    text-align: center;
+}
+
+.username {
+    color: #c1c1c1;
+}
+.name{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.content{
+    margin: 30px;
+    padding: 10px 30px;
+    background-color: #2E1452;
+    border-radius: 10px;
+}
+
+.card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3D1C6A;
+    border-radius: 8px;
+    padding: 0 10px;
+    margin: 10px 0;
+    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.poster{
+    height: 67px;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+
+.row {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    max-width: 20%;
+}
+
+.label{
+    font-weight: lighter;
+    color: #c1c1c1;
+}
+
+.text {
+    font-weight: bold;
+}
