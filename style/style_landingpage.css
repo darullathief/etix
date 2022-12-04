@@ -114,12 +114,12 @@ input[type=submit] {
 }
 
 .imgcard{
-    width : 200px;
+    width : 100%;
     border-radius: 15px;
 }
 
 .card{
-    width: 200px;
+    width: 100%;
     margin: 50px;
     box-shadow: 5px 5px 20px black;
     overflow: hidden;
@@ -130,9 +130,41 @@ input[type=submit] {
 
 .intro{
     color: #2E1452;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
+
 
 .container{
     display: flex;
     justify-content: space-around;
+    padding: 0 30px ;
+}
+
+.subtulisan1{
+    text-align:left;
+    margin-top: 40px ;
+    font-size: 20px ;
+    margin-left: 70px;
+}
+
+.container2{
+    justify-content: space-around;
+}
+
+.card2{
+    width: 30%;
+    height: 220px;
+    margin: 10px;
+    display: inline-block;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 15px ;
+}
+
+.imgcard2{
+    width : 100%;
+    border-radius: 15px;
 }
