@@ -77,6 +77,7 @@ input[type=submit] {
     height: 281px;
     margin-left: 50px;
     box-shadow: 50px 30px 30px white;
+
     justify-self: end;
 }
 
@@ -240,3 +241,32 @@ input[type=submit] {
     justify-content: space-between;
 }
 
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2E1452;
+    padding: 15px 0;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.btn-socmed{
+    display: block;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #E6CC00;
+    color: #2E1452;
+    border-radius: 10px;
+}
