@@ -1,0 +1,105 @@
+body {
+    background-color: #2E1452;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav .logo {
+    width: 70px;
+    margin: 0 30px;
+}
+
+nav{
+    position: fixed;
+    background-color: #2E1452;
+    top: 0;
+    z-index: 99;
+    height: 50px;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.container{
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: 300px auto;
+    background-color: #1C0E2F;
+    color: white ;
+}
+
+.sidebar{
+    background-color: #2E1452;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+.gambar1{
+    width: 100px;
+    height: 100px;
+}
+
+.file{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.username{
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.fullname{
+    font-size: 20px;
+    margin: 0;
+}
+
+h2{
+    margin-left: 30px;
+}
+
+.form{
+    padding: 20px;
+}
+
+input{
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #1C0E2F;
+}
+
+input[placeholder=Day]{
+    width: 20%;
+}
+
+input[placeholder=Month]{
+    width: 20%;
+}
+
+input[placeholder=Year]{
+    width: 20%;
+}
+
+.yellow{
+    background-color: #E6CC00;
+    font-weight: bold;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+li{
+    margin: 15px;
+}
