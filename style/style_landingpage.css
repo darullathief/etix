@@ -183,6 +183,7 @@ input[type=submit] {
 .bodytengah{
     background-color: #49227E;
     padding-top: 10px;
+    padding-bottom: 60px;
 }
 
 .subtulisan2{
@@ -240,3 +241,8 @@ input[type=submit] {
     justify-content: space-between;
 }
 
+.vectorsell{
+    margin-top: 20px;
+    width: 20%;
+    align-items: center;
+}
