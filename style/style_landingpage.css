@@ -41,6 +41,7 @@ nav .btn{
 }
 
 .typography1{
+    font-family: etixFont;
     text-align: center;
     margin-top: 120px ;
     font-size: 44px ;
@@ -245,4 +246,18 @@ input[type=submit] {
     margin-top: 20px;
     width: 20%;
     align-items: center;
+}
+
+@font-face {
+    font-family: etixFont ;
+    src: url(/font/Etix.ttf) format('opentype');
+}
+
+@font-face {
+    font-family:"Poppins";
+    src: url(/font/Poppins.ttf) format('truettype');
+}
+
+.warnafont{
+    color: #E6CC00;
 }
