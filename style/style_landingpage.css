@@ -201,6 +201,8 @@ input[type=submit] {
     margin-top: 10px ;
     font-size: 20px ;
     margin-left: 70px;
+    display: flex;
+    align-items: center;
 }
 
 .topselling{
@@ -319,4 +321,16 @@ footer a{
 
 a { 
     text-decoration: none;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.subsubtulisan2a p {
+    display: inline;
+    line-height: 40px;
 }
