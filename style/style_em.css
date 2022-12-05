@@ -100,3 +100,103 @@ td:last-child{
 .btn-del{
     background-color: red;
 }
+
+/* Edit */
+
+input, select{
+    display: inline-block;
+    padding: 8px 10px;
+    margin: 20px 5px 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+}
+
+.fr{
+    width: 30%;
+}
+.fl{
+    width: 60%;
+}
+
+.tr, .tc, .tl{
+    width: 25%;
+    margin-right: 5px;
+}
+
+.action{
+    display: inline-block;
+    width: 15%;
+    margin-left: 15px;
+}
+
+.action a {
+   text-decoration: none;
+   margin-right: 5px;
+   color: #2E1452;
+   width: 30px;
+   height: 30px;
+   line-height: 30px;
+   text-align: center;
+   border-radius: 5px;
+   display: inline-block;
+   background-color: #E6CC00;
+}
+
+textarea{
+    display: inline-block;
+    resize: none;
+    width: 90%;
+    padding: 8px 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.save{
+    float: right;
+    margin-right: 9%;
+    margin-top: 20px;
+}
+
+.btn-save, .btn-cancel{
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 5px;
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 16px;
+}
+
+.btn-save{
+    background-color: #E6CC00;
+    color: #2E1452;
+}
+
+.btn-cancel{
+    background-color: #2E1452;
+    color: #E6CC00;
+    border: 1px solid #E6CC00;
+}
+
+.fileup{
+    display: block;
+    background-color: white;
+    color: #2E1452;
+    width: 90%;
+    padding: 8px 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.fileup p {
+    margin: 0;
+    font-weight: bold;
+}
+input[type=file]{
+    display: inline-block;
+    width: 100%;
+    border: 1px solid black;
+}

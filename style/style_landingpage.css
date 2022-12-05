@@ -41,6 +41,7 @@ nav .btn{
 }
 
 .typography1{
+    font-family: etixFont;
     text-align: center;
     margin-top: 120px ;
     font-size: 44px ;
@@ -77,6 +78,7 @@ input[type=submit] {
     height: 281px;
     margin-left: 50px;
     box-shadow: 50px 30px 30px white;
+
     justify-self: end;
 }
 
@@ -126,6 +128,7 @@ input[type=submit] {
     background-color: white;
     border-radius: 15px ;
     padding: 10px 10px 10px;
+    text-align: center;
 }
 
 .intro{
@@ -183,6 +186,7 @@ input[type=submit] {
 .bodytengah{
     background-color: #49227E;
     padding-top: 10px;
+    padding-bottom: 60px;
 }
 
 .subtulisan2{
@@ -240,3 +244,75 @@ input[type=submit] {
     justify-content: space-between;
 }
 
+
+.vectorsell{
+    margin-top: 20px;
+    width: 20%;
+    align-items: center;
+}
+
+@font-face {
+    font-family: etixFont ;
+    src: url(/font/Etix.ttf) format('opentype');
+}
+
+@font-face {
+    font-family:"Poppins";
+    src: url(/font/Poppins.ttf) format('truettype');
+}
+
+.warnafont{
+    color: #E6CC00;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2E1452;
+    padding: 15px 0 40px;
+    margin-top: 40px;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.btn-socmed{
+    display: block;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #E6CC00;
+    color: #2E1452;
+    border-radius: 10px;
+}
+
+.jualticket{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tulisanjual{
+    text-align: left;
+    font-size: 20px;
+    margin-left: 20px;
+
+}
+
+.jual{
+    border-radius: 15px;
+    padding: 10px;
+    margin-left: 30px;
+
+}
