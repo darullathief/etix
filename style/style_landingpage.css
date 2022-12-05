@@ -31,7 +31,7 @@ nav .logo {
     color: #2E1452;
     text-decoration: none;
     font-weight: bold;
-    
+
 }
 
 nav .btn{
@@ -78,6 +78,7 @@ input[type=submit] {
     height: 281px;
     margin-left: 50px;
     box-shadow: 50px 30px 30px white;
+
     justify-self: end;
 }
 
@@ -242,6 +243,7 @@ input[type=submit] {
     justify-content: space-between;
 }
 
+
 .vectorsell{
     margin-top: 20px;
     width: 20%;
@@ -260,4 +262,36 @@ input[type=submit] {
 
 .warnafont{
     color: #E6CC00;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2E1452;
+    padding: 15px 0 40px;
+    margin-top: 40px;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.btn-socmed{
+    display: block;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #E6CC00;
+    color: #2E1452;
+    border-radius: 10px;
 }
