@@ -128,6 +128,7 @@ input[type=submit] {
     background-color: white;
     border-radius: 15px ;
     padding: 10px 10px 10px;
+    text-align: center;
 }
 
 .intro{
@@ -294,4 +295,24 @@ footer a{
     background-color: #E6CC00;
     color: #2E1452;
     border-radius: 10px;
+}
+
+.jualticket{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tulisanjual{
+    text-align: left;
+    font-size: 20px;
+    margin-left: 20px;
+
+}
+
+.jual{
+    border-radius: 15px;
+    padding: 10px;
+    margin-left: 30px;
+
 }
