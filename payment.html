@@ -6,45 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style/style_payment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="payment">
             <div class="card">
-                <h2>Konfirmasi Pembayaran</h2>
+                <h2>Payment Confirmation</h2>
                 <form action="">
-                    <input type="text" name="" placeholder="Nama Lengkap">
-                    <input type="text" name="norek" placeholder="No. Rekening">
+                    <input type="text" name="" placeholder="Fullname">
+                    <input type="text" name="norek" placeholder="Account Number">
                     <select name="" >
-                        <option value="" selected disabled>Metode Pembayaran</option>
+                        <option value="" selected disabled>Payment Method</option>
                         <option value="BNI">BNI</option>
                         <option value="BCA">BCA</option>
                         <option value="Dana">Dana</option>
                         <option value="Shopeepay">Shopeepay</option>
                     </select>
                     <div class="fileup">
-                        <p>Upload Poster</p>
+                        <p>Evidence</p>
                         <input type="file" name="" id=""></div>
 
-                    <input type="submit" value="Konfirmasi" class="btn">
+                    <input type="submit" value="Corfirm" class="btn">
                 </form>
             </div>
             
             <div class="card">
-                <h2>Cara Pembayaran</h2>
+                <h2>Payment Guide</h2>
                 <ol>
-                    <li>Akses BNI Mobile Banking dari smartphone.</li>
-                    <li>Pilih menu "Transfer"</li>
-                    <li>Pilih menu "Virtual Account Billing" kemudian pilih rekening debet.</li>
-                    <li>Masukkan nomor Virtual Account Anda (contoh: 8241002201150001) pada menu "input baru"..</li>
-                    <li>Konfirmasi transaksi dan masukkan Password Transaksi.</li>
+                    <li>Isi data pemesanan tiket.</li>
+                    <li>Lakukan transfer sejumlah pesanan ke no. rekening yang tertera di samping.</li>
+                    <li>Upload bukti Pembayaran</li>
+                    <li>Tekan tombol confirm</li>
+                    <li>Tunggu pembayaran kamu dikonfirmasi...</li>
                 </ol>
             </div>
         </div>
 
         <aside>
             <div class="side">
-                <h2>Ringkasan Pemesanan</h2>
+                <h2>Order <Summary></Summary></h2>
                 <p class="title">NFL Super Bowl LVII Tickets</p>
                 <div class="summary">
                     <p class="item">Early Bird</p>
@@ -59,8 +62,9 @@
             <div class="side">
                 <h2>Rekening Pembayaran</h2>
                 <p class="item">BCA : 121212121212121212</p>
-                <p class="item">BCA : 121212121212121212</p>
-                <p class="item">BCA : 121212121212121212</p>
+                <p class="item">BNI : 121212121212121212</p>
+                <p class="item">Dana : 081221123443</p>
+                <p class="item">Shopeepay : 081221123443</p>
             </div>
         </aside>
 
