@@ -166,7 +166,7 @@ footer a{
 
 .vectorsell{
     margin-top: 20px;
-    width: 20%;
+    width: 40%;
     align-items: center;
 }
 
@@ -183,18 +183,15 @@ footer a{
 .jual{
     border-radius: 15px;
     padding: 10px;
-    margin-left: 30px;
 
 }
 
 .jual2{
     border-radius: 15px;
     padding: 10px;
-    margin-left: 30px;
+    margin-left: 10px;
     background-color:#49227e ;
     color: white;
-
-
 }
 
 .tomboljual{
