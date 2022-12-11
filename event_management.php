@@ -21,16 +21,37 @@
             </ul>
         </aside>
         <div class="event">
-            <h2>Event List</h2>
-            <table>
-                <tr>
-                    <th>Event Id</th>
-                    <th>Event Name</th>
-                    <th>Category</th>
-                    <th>Date</th>
-                    <th>Location</th>
-                    <th>Action</th>
-                </tr>
+        <h2>Event List</h2>
+            <?php
+             require 'script/conn.php';
+                $query = "select * from event";
+                $result = mysqli_query($conn, $query);
+                
+                $rows= [];
+                
+                while ($row = mysqli_fetch_assoc($result) ) {
+                    $rows[] = $row;
+                }
+
+                if(count($rows) == 0){
+                    echo"<p>Belum Ada Event</p>";
+                } else {
+                    echo"
+                    <table>
+                        <tr>
+                            <th>Status</th>
+                            <th>Kode Event</th>
+                            <th>Nama Event</th>
+                            <th>Kategori</th>
+                            <th>Action</th>
+                        </tr>
+                        
+                        ";
+                }
+                 
+            ?>
+            
+            
                 <tr>
                     <td>O1212</td>
                     <td>NFL Super Bowl LVII Tickets</td>
