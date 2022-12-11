@@ -31,7 +31,7 @@ nav .logo {
 
 aside {
     background-color: #2E1452;
-    height: 100vh;
+    height: 150vh;
     width: 30vh;
 }
 
@@ -85,6 +85,16 @@ td,th{
 }
 
 .bp {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.seventeen {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.art {
     width: 200px;
     border-radius: 10px;
 }
