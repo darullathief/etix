@@ -45,59 +45,32 @@
                             <th>Kategori</th>
                             <th>Action</th>
                         </tr>
-                        
                         ";
+                        foreach ($rows as $r) {
+                            echo "<tr>
+                                    <td>".$r['statusEvent']."</td>
+                                    <td>".$r['kdEvent']."</td>
+                                    <td>".$r['namaEvent']."</td>
+                                    <td>".$r['kategoriEvent']."</td>";
+                                    
+                            if ($r['statusEvent'] == "On Review") {
+                                echo '<td>-</td></tr>';
+                            } else  if ($r['statusEvent'] == "Approved") {
+                                echo '<td><a href="edit_event.html?kd_event='.$r['kdEvent'].'" class="lst">Last Step</a></td></tr>';
+                            } elseif ($r['statusEvent'] == "On Sale") {
+                               echo '<td><a href="edit_event.html" class="btn"><span class="material-symbols-outlined">
+                                    edit
+                                    </span></a>
+                                    <a href="#" class="btn btn-del"><span class="material-symbols-outlined">
+                                    delete
+                                    </span></a></td></tr>';
+                            }
+                        }
+                        echo'</table>';
                 }
                  
             ?>
-            
-            
-                <tr>
-                    <td>O1212</td>
-                    <td>NFL Super Bowl LVII Tickets</td>
-                    <td>Sport</td>
-                    <td>14-01-23  19:00</td>
-                    <td>Concert Hall, Hong Kong City Hall</td>
-                    <td>
-                        <a href="edit_event.html" class="btn"><span class="material-symbols-outlined">
-                            edit
-                            </span></a>
-                        <a href="#" class="btn btn-del"><span class="material-symbols-outlined">
-                            delete
-                            </span></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>O1212</td>
-                    <td>NFL Super Bowl LVII Tickets</td>
-                    <td>Sport</td>
-                    <td>14-01-23  19:00</td>
-                    <td>Concert Hall, Hong Kong City Hall</td>
-                    <td>
-                        <a href="edit_event.html" class="btn"><span class="material-symbols-outlined">
-                            edit
-                            </span></a>
-                        <a href="#" class="btn btn-del"><span class="material-symbols-outlined">
-                            delete
-                            </span></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>O1212</td>
-                    <td>NFL Super Bowl LVII Tickets</td>
-                    <td>Sport</td>
-                    <td>14-01-23  19:00</td>
-                    <td>Concert Hall, Hong Kong City Hall</td>
-                    <td>
-                        <a href="edit_event.html" class="btn"><span class="material-symbols-outlined">
-                            edit
-                            </span></a>
-                        <a href="#" class="btn btn-del"><span class="material-symbols-outlined">
-                            delete
-                            </span></a>
-                    </td>
-                </tr>
-            </table>
+                       
         </div>
     </div>
 </body>
