@@ -334,3 +334,10 @@ a {
     display: inline;
     line-height: 40px;
 }
+
+.navitem{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin: 0 10px;
+}
