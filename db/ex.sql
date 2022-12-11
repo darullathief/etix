@@ -1,3 +1,7 @@
+create or replace database etix;
+
+use etix;
+
 create table user
 (username varchar(25) not null,
 email varchar(30),
