@@ -1,4 +1,5 @@
 <?php
+require "script/conn.php";
 
 $kdEvent            = rand(10000,99999);
 $namaEvent          = $_GET['namaEvent'];
