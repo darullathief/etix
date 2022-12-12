@@ -16,7 +16,7 @@
     <nav>
         <a href="landingpage.html"><img src="img/ETIX LOGO.png" class="logo" alt="logo"></a>
         <div>
-            <a href="#" class="navitem">Transactiom</a>
+            <a href="#" class="navitem">Transaction</a>
             <a href="event_management.php" class="navitem">My Event</a>
             <a href="#" class="navitem">My Ticket</a>
             <a href="#" class="navitem">Profile</a>
@@ -185,7 +185,7 @@
         
         while ($row = mysqli_fetch_assoc($result) ) {
             echo'
-            <a href="detail.html">
+            <a href="detail.php?kdEvent="'.$row['kdEvent'].'>
             <div class="topselling">
                 <div class="cardticket">
                     <img class="imgticket" src="'.$row['poster'].'" alt="Ticket">
