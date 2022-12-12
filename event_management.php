@@ -58,7 +58,7 @@
                             } else  if ($r['statusEvent'] == "Approved") {
                                 echo '<td><a href="edit_event.php?kd_event='.$r['kdEvent'].'" class="lst">Last Step</a></td></tr>';
                             } elseif ($r['statusEvent'] == "On Sale") {
-                               echo '<td><a href="edit_event.html" class="btn"><span class="material-symbols-outlined">
+                               echo '<td><a href="edit_event.php?kd_event='.$r['kdEvent'].'" class="btn"><span class="material-symbols-outlined">
                                     edit
                                     </span></a>
                                     <a href="#" class="btn btn-del"><span class="material-symbols-outlined">
