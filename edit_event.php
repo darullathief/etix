@@ -1,6 +1,6 @@
 <?php
 require 'script/conn.php';
-$event = $_GET['kd_event'];
+$GLOBALS['event']  = $_GET['kd_event'];
 $query = "select * from event where kdEvent='$event'";
 $result = mysqli_query($conn, $query);
 
@@ -40,9 +40,10 @@ while ($row = mysqli_fetch_assoc($result)) {
         <div class="event">
             <h2>Edit Event</h2>
 
-            <form action="script/update_event.php" class="edit" enctype="multipart/form-data">
+            <form action="script/update_event.php" class="edit" enctype="multipart/form-data" method="post">
                 <?php foreach ($rows as $r) {
                     echo '
+                    <input type="text" name="kdEvent" style="display:none;" value ="'.$r["kdEvent"].'">
                     <input type="text" name="namaEvent" placeholder="Event Name" class="fl" value ="'.$r["namaEvent"].'">
                     <select name="" class="fr">
                         <option value="" selected disabled>'.$r["kategoriEvent"].'</option>
