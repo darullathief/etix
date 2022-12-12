@@ -1,11 +1,11 @@
 <?php
 $servername = "localhost";
-$username = "root";
+$user = "root";
 $password = "";
 $db_name = "etix";
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $db_name);
+$conn = mysqli_connect($servername, $user, $password, $db_name);
 
 // Check connection
 if (!$conn) {
