@@ -259,7 +259,7 @@
         </div>
 
                 <div>
-                    <a href="#" class="btn jual">Submit Your Event</a>
+                    <a href="sellticket.html" class="btn jual">Submit Your Event</a>
                 </div></div>
              </div>
 
