@@ -185,7 +185,7 @@
         
         while ($row = mysqli_fetch_assoc($result) ) {
             echo'
-            <a href="detail.html">
+            <a href="detail.php?kdEvent="'.$row['kdEvent'].'>
             <div class="topselling">
                 <div class="cardticket">
                     <img class="imgticket" src="'.$row['poster'].'" alt="Ticket">
