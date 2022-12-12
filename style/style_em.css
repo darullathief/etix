@@ -95,6 +95,15 @@ td:last-child{
     height: 30px;
     text-align: center;
     line-height: 40px;
+    
+}
+
+.lst {
+    width: 100px;
+    display: inline-block;
+    background-color: #E6CC00;
+    color: white;
+    text-decoration: none;
 }
 
 .btn-del{
