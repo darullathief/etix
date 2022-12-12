@@ -56,7 +56,7 @@
                             if ($r['statusEvent'] == "On Review") {
                                 echo '<td>-</td></tr>';
                             } else  if ($r['statusEvent'] == "Approved") {
-                                echo '<td><a href="edit_event.html?kd_event='.$r['kdEvent'].'" class="lst">Last Step</a></td></tr>';
+                                echo '<td><a href="edit_event.php?kd_event='.$r['kdEvent'].'" class="lst">Last Step</a></td></tr>';
                             } elseif ($r['statusEvent'] == "On Sale") {
                                echo '<td><a href="edit_event.html" class="btn"><span class="material-symbols-outlined">
                                     edit

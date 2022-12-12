@@ -43,23 +43,20 @@ $eventdate = null;
         <div class="event">
             <h2>Edit Event</h2>
 
-            <form action="" class="edit">
+            <form action="script/update_event.php" class="edit" enctype="multipart/form-data">
                 <?php foreach ($rows as $r) {
                     echo '
-                    <input type="text" name="" placeholder="Event Name" class="fl" value ="'.$r["namaEvent"].'">
+                    <input type="text" name="namaEvent" placeholder="Event Name" class="fl" value ="'.$r["namaEvent"].'">
                     <select name="" class="fr">
-                        <option value="" selected disabled>Category</option>
-                        <option value="Musik">Music Concert</option>
-                        <option value="Olahraga">Sport</option>
-                        <option value="Theater">Art & Theater</option>
+                        <option value="" selected disabled>'.$r["kategoriEvent"].'</option>
                     </select>
 
-                    <input type="text" name="" placeholder="Event Location" class="fl" value ="'.$r["lokasiEvent"].'">
-                    <input type="date" name="" class="fr" value ="'.$r["tanggalEvent"].'">
+                    <input type="text" name="lokasiEvent" placeholder="Event Location" class="fl" value ="'.$r["lokasiEvent"].'">
+                    <input type="date" name="tanggalEvent" class="fr" value ="'.$r["tanggalEvent"].'">
 
-                    <input type="text" name="" placeholder="Ticket Category" class="tl">
-                    <input type="text" name="" placeholder="Price" class="tc">
-                    <input type="text" name="" placeholder="Sell" class="tr">
+                    <input type="text" name="jenisTiket" placeholder="Ticket Category" class="tl">
+                    <input type="text" name="harga" placeholder="Price" class="tc">
+                    <input type="text" name="kapasitasTiket" placeholder="Sell" class="tr">
                     <div class="action">
                         <a href="#">+</a>
                         <a href="#">-</a>
@@ -67,13 +64,13 @@ $eventdate = null;
 
                     <div class="fileup">
                         <p>Upload Poster</p>
-                        <input type="file" name="" id=""></div>
+                        <input type="file" name="poster" id=""></div>
                     
-                    <textarea name="" placeholder="Description" cols="5" rows="10"></textarea>';
+                    <textarea name="deskripsi" placeholder="Description" cols="5" rows="10"></textarea>';
                 }?>
                 <div class="save">
                     <a href="event_management.html" class="btn-cancel">Cancel</a>
-                    <a href="#" class="btn-save">Save</a>
+                    <input type="submit" class="btn-save" value="Save">
                 </div>
             </form>
         </div>
