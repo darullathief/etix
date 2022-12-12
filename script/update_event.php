@@ -25,7 +25,8 @@ $query1 = "update event SET statusEvent='On Sale', lokasiEvent='$lokasiEvent', t
 $query2 = "insert into ticketchategory(kdJenis, jenisTiket, kdEvent, harga, kapasitasTiket)
             ('$kdJenis','$jenisTiket','$kdEvent','$harga','$kapasitasTiket')";
 
-if (mysqli_query($conn, $query1) && mysqli_query($conn, $query2)) {
-    header("Location: event_management.php");
-}
+mysqli_query($conn, $query1);
+mysqli_query($conn, $query2);
+header('Location: ../event_management.php');
+
 ?>

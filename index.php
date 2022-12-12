@@ -1,6 +1,6 @@
 <?php
  if (!isset($username)){
-    echo"HAHAHA";
+    
  }
 ?>
 <!DOCTYPE html>
@@ -102,6 +102,7 @@
                 <p> Music Concert</p>
             </div>
     
+            <a href=""></a>
             <div class="card2">
                 <img class="imgcard2" src="img/browsesport.jpeg" alt="Sport">
                 <p> Sports </p>
@@ -177,22 +178,32 @@
                 <p> Sport </p>
         </div> 
         <br>
-        <a href="detail.html">
-        <div class="topselling">
-            <div class="cardticket">
-                <img class="imgticket" src="https://s1.ticketm.net/tm/en-us/img/static/superbowl/23/super-bowl-tile-2023.jpg" alt="Ticket">
-                <div class="shapesdesc">
-                    <div class="descticket">
-                        <p> <b> NFL Super Bowl LVII Tickets</b>
-                        <br> at Concert Hall, Hong Kong City Hall </p>
-                    </div>
-                    <div class="descpriceticket">
-                        <p> start from </p>
-                        <p> Rp 100.000</p>
+        <?php
+        require 'script/conn.php';
+        $query = "select * from event where kategoriEvent = 'Sport'";
+        $result = mysqli_query($conn, $query);
+        
+        while ($row = mysqli_fetch_assoc($result) ) {
+            echo'
+            <a href="detail.html">
+            <div class="topselling">
+                <div class="cardticket">
+                    <img class="imgticket" src="'.$row['poster'].'" alt="Ticket">
+                    <div class="shapesdesc">
+                        <div class="descticket">
+                            <p> <b>'.$row['namaEvent'].'</b>
+                            <br> at Concert Hall, Hong Kong City Hall </p>
+                        </div>
+                        <div class="descpriceticket">
+                            <p> start from </p>
+                            <p> Rp 100.000</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            </a>
+                </a>';
+        }
+        ?>
+       
         </div>
 
 <br>
