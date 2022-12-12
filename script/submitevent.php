@@ -5,6 +5,7 @@ $namaEvent          = $_GET['namaEvent'];
 $tanggalEvent       = $_GET['tanggalEvent'];
 $lokasiEvent        = $_GET['lokasiEvent'];
 $statusEvent        = $_GET['statusEvent'];
+$kategoriEvent      = $_GET['kategoriEvent'];
 
 $sql = "INSERT INTO event(kdEvent,username,namaEvent,tanggalEvent,lokasiEvent,statusEvent)
         VALUES('$kdEvent','$username','$namaEvent'.'$tanggalEvent','$lokasiEvent','ON REVIEW')";
