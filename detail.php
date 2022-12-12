@@ -32,15 +32,15 @@
             echo'
         <div class="jumbotron">
             <div>
-                <p>'$row[]'</p>
-                <h1>NFL Super Bowl LVII Tickets</h1>
-                <p>Uploaded by : <b>Nine Sport</b></p>
+                <p>'.$row['kategoriEvent'].'</p>
+                <h1>'.$row['namaEvent'].'</h1>
+                <p>Uploaded by : <b>'.$row['username'].'</b></p>
             </div>
         </div>
 
         <aside>
-            <p>Saturday, 14 January 2023  19:00</p>
-            <p>Concert Hall, Hong Kong City Hall</p>
+            <p>'.$row['tanggalEvent'].'</p>
+            <p>'.$row['lokasiEvent'].'</p>
             <h2>Ticket Category</h2>
             <div class="cat-ticket">
                 <!-- Kategori 1 -->
@@ -82,24 +82,9 @@
         </aside>
 
         <div class="content">
-            <img class="thumbnail" src="https://s1.ticketm.net/tm/en-us/img/static/superbowl/23/super-bowl-tile-2023.jpg">
+            <img class="thumbnail" src="'.$row['poster'].'">
             <h2>Description</h2>
-            <p class="desc">Every year, the Super Bowl brings big thrills 
-                to football fans across the country, pitting the Conference 
-                champions against each other for the final matchup of the season. 
-                Millions will tune in to the televised game, but nothing beats being 
-                there live. See who will take home the coveted Vince Lombardi Trophy
-                 when the tradition continues in Glendale, AZ for Super Bowl LVII on 
-                 February 12, 2023, at State Farm Stadium. Get your tickets today at 
-                 Ticketmaster, the Official Ticketing Partner of the NFL. All Super 
-                 Bowl tickets are 100% mobile, so you can guarantee that the seat you 
-                 buy is the seat you get. <br><br>
-                 As the official partner of On Location, we’ve got your VIP 
-                 access to the Big Game. From premium seats and the hottest 
-                 tailgate parties, to meet and greets with NFL legends and 
-                 getting you and your crew on the field to celebrate with the 
-                 champions — a Super Bowl LVII package is the way to go for the 
-                 ultimate game-day experience. Check out available tickets.</p>
+            <p class="desc">'.$row['deskripsi'].'</p>
         </div>
     </div>';?>
 
