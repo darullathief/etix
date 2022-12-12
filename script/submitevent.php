@@ -11,6 +11,6 @@ $sql = "INSERT INTO event(kdEvent,username,namaEvent,tanggalEvent,lokasiEvent,st
         VALUES('$kdEvent','$username','$namaEvent'.'$tanggalEvent','$lokasiEvent','ON REVIEW')";
 
 mysqli_query($conn,$sql);
-header("Location: localhost/etix/thankssellticket.html"); 
+header("Location: ../thankssellticket.html"); 
 
 ?>
