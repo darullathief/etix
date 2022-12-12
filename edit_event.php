@@ -43,6 +43,7 @@ $eventdate = null;
         <div class="event">
             <h2>Edit Event</h2>
 
+
             <form action="script/update_event.php" class="edit" enctype="multipart/form-data">
                 <?php foreach ($rows as $r) {
                     echo '
@@ -57,6 +58,7 @@ $eventdate = null;
                     <input type="text" name="jenisTiket" placeholder="Ticket Category" class="tl">
                     <input type="text" name="harga" placeholder="Price" class="tc">
                     <input type="text" name="kapasitasTiket" placeholder="Sell" class="tr">
+
                     <div class="action">
                         <a href="#">+</a>
                         <a href="#">-</a>
@@ -69,8 +71,9 @@ $eventdate = null;
                     <textarea name="deskripsi" placeholder="Description" cols="5" rows="10"></textarea>';
                 }?>
                 <div class="save">
-                    <a href="event_management.html" class="btn-cancel">Cancel</a>
+                    <a href="event_management.php" class="btn-cancel">Cancel</a>
                     <input type="submit" class="btn-save" value="Save">
+
                 </div>
             </form>
         </div>
