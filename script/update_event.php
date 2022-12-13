@@ -9,7 +9,11 @@ $harga = $_POST['harga'];
 $kapasitasTiket = $_POST['kapasitasTiket'];
 // $poster = $_POST['poster'];
 $deskripsi = $_POST['deskripsi'];
-$kdJenis = rand(10000,99999);
+$kdJenis = $_POST['kdJenis'];
+
+if ($kdJenis == '') {
+    $kdJenis = rand(10000,99999);
+}
 
 $target_dir     = "../upload/";
 $target_file    = $target_dir . basename($_FILES['poster']['name']);
@@ -31,7 +35,7 @@ if ($fileSize > 0) {
 }
 
 
-$query2 = "insert into ticketchategory(kdJenis, jenisTiket, kdEvent, harga, kapasitasTiket)
+$query2 = "replace into ticketchategory(kdJenis, jenisTiket, kdEvent, harga, kapasitasTiket)
             values ('$kdJenis','$jenisTiket','$kdEvent',$harga,$kapasitasTiket)";
 
 if (mysqli_query($conn, $query1)) {
@@ -40,9 +44,9 @@ if (mysqli_query($conn, $query1)) {
     echo "Error: " . $query1 . "<br>" . mysqli_error($conn);
   }
 
-  if (mysqli_query($conn, $query2)) {
+if (mysqli_query($conn, $query2)) {
     header('Location: ../event_management.php');
-}  else {
+} else {
     echo "Error: " . $query2 . "<br>" . mysqli_error($conn);
   }
 

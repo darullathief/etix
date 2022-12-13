@@ -1,3 +1,36 @@
+<?php
+    $kategori= $_GET['kategori'];
+
+    if($kategori= "Arts"){
+        $kategori = "Arts & Theatre";
+    }
+        function show($k){
+            require 'script/conn.php';
+            $query = "select * from vevent where kategoriEvent = '$k' &&  statusEvent='On Sale' 
+            group by kdevent 
+            limit 3";
+            $result = mysqli_query($conn, $query);
+
+            while ($row = mysqli_fetch_assoc($result) ){
+                echo'
+                <a href="detail.php?kdEvent='.$row['kdEvent'].'">
+                    <div class="cardticket">
+                        <img class="imgticket" src="upload/'.$row['poster'].'" alt="Ticket">
+                        <div class="shapesdesc">
+                            <div class="descticket">
+                                <p> <b>'.$row['namaEvent'].'</b>
+                                <br> at '.$row['lokasiEvent'].' </p>
+                            </div>
+                            <div class="descpriceticket">
+                                <p> start from </p>
+                                <p> '.$row['harga'].'</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>';
+            }
+        }
+        ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +42,7 @@
 </head>
 <body>
     <nav>
-        <a href="landingpage.html"><img src="img/ETIX LOGO.png" class="logo" alt="logo"></a>
+        <a href="index.php"><img src="img/ETIX LOGO.png" class="logo" alt="logo"></a>
         
         
         <div class="formsearch">
@@ -20,8 +53,10 @@
 
 
         <div>
-            <a href="login.html" class="btn">Login</a>
-            <a href="login.html" class="btn">Register</a>
+            <a href="payment_history.html" class="navitem">Transaction</a>
+            <a href="event_management.php" class="navitem">My Event</a>
+            <a href="myticket.html" class="navitem">My Ticket</a>
+            <a href="profile.html" class="navitem">Profile</a>
         </div>
     </nav>
        
@@ -34,58 +69,11 @@
 
         <div class="subsubtulisan2a">
             <img src="icon/iconsport.png" class="icon">
-                <p> Sport </p>
+                <p> <?php echo $kategori;?> </p>
         </div>
         <br>
-        <a href="detail.html">
         <div class="topselling">
-            <div class="cardticket">
-                <img class="imgticket" src="https://s1.ticketm.net/tm/en-us/img/static/superbowl/23/super-bowl-tile-2023.jpg" alt="Ticket">
-                <div class="shapesdesc">
-                    <div class="descticket">
-                        <p> <b> NFL Super Bowl LVII Tickets</b>
-                        <br> at Concert Hall, Hong Kong City Hall </p>
-                    </div>
-                    <div class="descpriceticket">
-                        <p> start from </p>
-                        <p> Rp 100.000</p>
-                    </div>
-                </div>
-            </div>
-            </a>
-            <div class="cardticket">
-                <img class="imgticket" src="img/ticketpic3.jpeg" alt="Ticket">
-                <div class="shapesdesc">
-                    <div class="descticket">
-                        <p> <b>  BTS : Purple Earth </b>
-                        <br> at Stadion Gelora Bung Karno </p>
-                    </div>
-                    <div class="descpriceticket">
-                        <p> start from </p>
-                        <p> Rp 1.000.000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cardticket">
-                <img class="imgticket" src="img/ticketpic2.jpeg" alt="Ticket">
-                <div class="shapesdesc">
-                    <div class="descticket">
-                        <p> <b> Jakarta Head in The Clouds Festival </b> 
-                        <br> Community Park PIK 2</p>
-                    </div>
-                    <div class="descpriceticket">
-                        <p> start from </p>
-                        <p> Rp 500.000</p>
-                    </div>
-                </div>
-            </div>
-
-            <br>
-
-            
-
-
+            <?php show($kategori);?>
         </div>
 
    

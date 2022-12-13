@@ -1,8 +1,36 @@
 <?php
- if (!isset($username)){
-    
- }
+if(!isset($_COOKIE['user_name'])) {
+    header("Location: landingpage.html");
+  }
+        
+function show($k){
+    require 'script/conn.php';
+    $query = "select * from vevent where kategoriEvent = '$k' &&  statusEvent='On Sale' 
+        group by kdevent 
+        limit 3";
+        $result = mysqli_query($conn, $query);
+
+        while ($row = mysqli_fetch_assoc($result) ){
+            echo'
+            <a href="detail.php?kdEvent='.$row['kdEvent'].'">
+                <div class="cardticket">
+                    <img class="imgticket" src="upload/'.$row['poster'].'" alt="Ticket">
+                    <div class="shapesdesc">
+                        <div class="descticket">
+                            <p> <b>'.$row['namaEvent'].'</b>
+                            <br> at '.$row['lokasiEvent'].' </p>
+                        </div>
+                        <div class="descpriceticket">
+                            <p> start from </p>
+                            <p> '.$row['harga'].'</p>
+                        </div>
+                    </div>
+                </div>
+            </a>';
+        }
+    }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,12 +42,12 @@
 </head>
 <body>
     <nav>
-        <a href="landingpage.html"><img src="img/ETIX LOGO.png" class="logo" alt="logo"></a>
+        <a href="index.php"><img src="img/ETIX LOGO.png" class="logo" alt="logo"></a>
         <div>
-            <a href="#" class="navitem">Transaction</a>
+            <a href="payment_history.html" class="navitem">Transaction</a>
             <a href="event_management.php" class="navitem">My Event</a>
-            <a href="#" class="navitem">My Ticket</a>
-            <a href="#" class="navitem">Profile</a>
+            <a href="myticket.html" class="navitem">My Ticket</a>
+            <a href="profile.html" class="navitem">Profile</a>
         </div>
     </nav>
         <div class="typography1">
@@ -97,167 +125,49 @@
         </div>
 
         <div class="container2">
+            <a href="searchcategory.html?kategori=Music">
             <div class="card2">
                 <img class="imgcard2" src="img/browsemusic.jpeg" alt="Music">
                 <p> Music Concert</p>
-            </div>
+            </div></a>
     
-            <a href=""></a>
+            <a href="searchcategory.html?kategori=Sport">
             <div class="card2">
                 <img class="imgcard2" src="img/browsesport.jpeg" alt="Sport">
                 <p> Sports </p>
-            </div>
+            </div></a>
     
+            <a href="searchcategory.html?kategori=Arts & Theatre">
             <div class="card2">
                 <img class="imgcard2" src="img/browseart.jpeg" alt="Art">
-                <p> Arts & Theater</p>
+                <p> Arts & Theater</p></a>
             </div>
         </div>
     </div>
 <br>
 <div class="bodytengah">
-        <!-- <div class="subtulisan2">
-                    <p> <b>Top Selling </b> <p>
-        </div>
         <div class="subsubtulisan2a">
-                <img src="icon/iconmusic.png" class="icon">
-                <p> Music Concert </p>
-        </div>
-<br>
-        <div class="topselling">
-            <div class="cardticket">
-                <img class="imgticket" src="img/ticketpic1.jpeg" alt="Ticket">
-                <div class="shapesdesc">
-                    <div class="descticket">
-                        <p> <b> Taylor Swift World Tour 2023</b>
-                        <br> at Stadion Gelora Bung Karno </p>
-                    </div>
-                    <div class="descpriceticket">
-                        <p> start from </p>
-                        <p> Rp 800.000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cardticket">
-                <img class="imgticket" src="img/ticketpic3.jpeg" alt="Ticket">
-                <div class="shapesdesc">
-                    <div class="descticket">
-                        <p> <b>  BTS : Purple Earth </b>
-                        <br> at Stadion Gelora Bung Karno </p>
-                    </div>
-                    <div class="descpriceticket">
-                        <p> start from </p>
-                        <p> Rp 1.000.000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cardticket">
-                <img class="imgticket" src="img/ticketpic2.jpeg" alt="Ticket">
-                <div class="shapesdesc">
-                    <div class="descticket">
-                        <p> <b> Jakarta Head in The Clouds Festival </b> 
-                        <br> Community Park PIK 2</p>
-                    </div>
-                    <div class="descpriceticket">
-                        <p> start from </p>
-                        <p> Rp 500.000</p>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-
-        <br>
-        <br>-->
-
-        <div class="subsubtulisan2a">
-            <img src="icon/iconsport.png" class="icon">
-                <p> Sport </p>
-        </div> 
-        <br>
-        <?php
-        require 'script/conn.php';
-        $query = "select * from event where kategoriEvent = 'Sport'";
-        $result = mysqli_query($conn, $query);
-        
-        while ($row = mysqli_fetch_assoc($result) ) {
-            echo'
-            <a href="detail.php?kdEvent='.$row['kdEvent'].'">
+                    <img src="icon/iconmusic.png" class="icon">
+                        <p> Music Concert </p>
+                </div> 
             <div class="topselling">
-                <div class="cardticket">
-                    <img class="imgticket" src="upload/'.$row['poster'].'" alt="Ticket">
-                    <div class="shapesdesc">
-                        <div class="descticket">
-                            <p> <b>'.$row['namaEvent'].'</b>
-                            <br> at '.$row['lokasiEvent'].' </p>
-                        </div>
-                        <div class="descpriceticket">
-                            <p> start from </p>
-                            <p> Rp 100.000</p>
-                        </div>
-                    </div>
-                </div>
-                </a>';
-        }
-        ?>
-       
-        </div></div>
-
-<br>
-<br>
+                <?php show("Music");?>
+            </div>
+        <div class="subsubtulisan2a">
+                    <img src="icon/iconsport.png" class="icon">
+                        <p> Sport </p>
+                </div> 
+            <div class="topselling">
+                <?php show("Sport");?>
+            </div>
 
         <div class="subsubtulisan2a">
-            <img src="icon/icontheatre.png" class="icon">
-            <p> Arts & Theatre </p>
+                    <img src="icon/icontheatre.png" class="icon">
+                        <p> Arts & Theatre </p>
+        </div> 
+        <div class="topselling">
+            <?php show("Arts & Theatre");?>
         </div>
-    <br>
-    <div class="topselling">
-        <div class="cardticket">
-            <img class="imgticket" src="img/ticketpic1.jpeg" alt="Ticket">
-            <div class="shapesdesc">
-                <div class="descticket">
-                    <p> <b> Taylor Swift World Tour 2023</b>
-                    <br> at Stadion Gelora Bung Karno </p>
-                </div>
-                <div class="descpriceticket">
-                    <p> start from </p>
-                    <p> Rp 800.000</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="cardticket">
-            <img class="imgticket" src="img/ticketpic3.jpeg" alt="Ticket">
-            <div class="shapesdesc">
-                <div class="descticket">
-                    <p> <b>  BTS : Purple Earth </b>
-                    <br> at Stadion Gelora Bung Karno </p>
-                </div>
-                <div class="descpriceticket">
-                    <p> start from </p>
-                    <p> Rp 1.000.000</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="cardticket">
-            <img class="imgticket" src="img/ticketpic2.jpeg" alt="Ticket">
-            <div class="shapesdesc">
-                <div class="descticket">
-                    <p> <b> Jakarta Head in The Clouds Festival </b> 
-                    <br> Community Park PIK 2</p>
-                </div>
-                <div class="descpriceticket">
-                    <p> start from </p>
-                    <p> Rp 500.000</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </div>
 
 <div class="jualticket">
