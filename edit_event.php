@@ -62,9 +62,9 @@ while ($row = mysqli_fetch_assoc($result)) {
 
                     <div class="fileup">
                         <p>Upload Poster</p>
-                        <input type="file" name="poster" id=""></div>
+                        <input type="file" name="poster" id="" value"'.$r["poster"].'"></div>
                     
-                    <textarea name="deskripsi" placeholder="Description" cols="5" rows="10"></textarea>';
+                    <textarea name="deskripsi" placeholder="Description" cols="5" rows="10">'.$r["deskripsi"].'</textarea>';
                 }?>
                 <div class="save">
                     <a href="event_management.html" class="btn-cancel">Cancel</a>

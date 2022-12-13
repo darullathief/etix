@@ -185,14 +185,14 @@
         
         while ($row = mysqli_fetch_assoc($result) ) {
             echo'
-            <a href="detail.php?kdEvent="'.$row['kdEvent'].'>
+            <a href="detail.php?kdEvent='.$row['kdEvent'].'">
             <div class="topselling">
                 <div class="cardticket">
-                    <img class="imgticket" src="'.$row['poster'].'" alt="Ticket">
+                    <img class="imgticket" src="upload/'.$row['poster'].'" alt="Ticket">
                     <div class="shapesdesc">
                         <div class="descticket">
                             <p> <b>'.$row['namaEvent'].'</b>
-                            <br> at Concert Hall, Hong Kong City Hall </p>
+                            <br> at '.$row['lokasiEvent'].' </p>
                         </div>
                         <div class="descpriceticket">
                             <p> start from </p>
