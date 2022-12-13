@@ -1,8 +1,8 @@
 <?php
 require "conn.php";
 
-$GLOBALS['username'] = $_POST['username'];
-$GLOBALS['password'] = $_POST['password'];
+$username = $_POST['username'];
+$password = $_POST['password'];
 
 $query = "select username, password from user";
 $result = mysqli_query($conn, $query);

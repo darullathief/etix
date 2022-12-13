@@ -2,7 +2,9 @@
 require 'script/conn.php';
 $GLOBALS['event']  = $_GET['kd_event'];
 $query = "select * from event where kdEvent='$event'";
+$query2 = "select * from ticketChategory where kdEvent='$event'";
 $result = mysqli_query($conn, $query);
+$result2 = mysqli_query($conn, $query2);
 
 $rows = [];
 
@@ -50,16 +52,21 @@ while ($row = mysqli_fetch_assoc($result)) {
                     </select>
 
                     <input type="text" name="lokasiEvent" placeholder="Event Location" class="fl" value ="'.$r["lokasiEvent"].'">
-                    <input type="date" name="tanggalEvent" class="fr" value ="'.$r["tanggalEvent"].'">
+                    <input type="date" name="tanggalEvent" class="fr" value ="'.$r["tanggalEvent"].'">';
 
-                    <input type="text" name="jenisTiket" placeholder="Ticket Category" class="tl">
-                    <input type="text" name="harga" placeholder="Price" class="tc">
-                    <input type="text" name="kapasitasTiket" placeholder="Sell" class="tr">
-                    <div class="action">
-                        <a href="#">+</a>
-                        <a href="#">-</a>
-                    </div>
-
+                    do{
+                        echo' 
+                            <input type="text" name="kdJenis" style="display: none;" value="'.$row['kdJenis'].'">
+                            <input type="text" name="jenisTiket" placeholder="Ticket Category" class="tl" value="'.$row['jenisTiket'].'">
+                            <input type="text" name="harga" placeholder="Price" class="tc" value="'.$row['harga'].'">
+                            <input type="text" name="kapasitasTiket" placeholder="Amount" class="tr" value="'.$row['kapasitasTiket'].'">
+                            <div class="action">
+                                <a href="#">+</a>
+                                <a href="#">-</a>
+                            </div>';
+                    } while ($row = mysqli_fetch_assoc($result2));
+                   
+                    echo'
                     <div class="fileup">
                         <p>Upload Poster</p>
                         <input type="file" name="poster" id="" value"'.$r["poster"].'"></div>
