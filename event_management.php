@@ -62,7 +62,7 @@
                                echo '<td><a href="edit_event.php?kd_event='.$r['kdEvent'].'" class="btn"><span class="material-symbols-outlined">
                                     edit
                                     </span></a>
-                                    <a href="#" class="btn btn-del"><span class="material-symbols-outlined">
+                                    <a href="script/delete_event.php?kd_event='.$r['kdEvent'].'" class="btn btn-del"><span class="material-symbols-outlined">
                                     delete
                                     </span></a></td></tr>';
                             }
