@@ -1,9 +1,11 @@
 <?php
     $kategori= $_GET['kategori'];
 
-    if($kategori= "Arts"){
-        $kategori = "Arts & Theatre";
-    }
+    //if($kategori= "Arts"){
+        //$kategori = "Arts & Theatre";
+    //} else{
+       // $kategori= $_GET['kategori'];
+    //}
         function show($k){
             require 'script/conn.php';
             $query = "select * from vevent where kategoriEvent = '$k' &&  statusEvent='On Sale' 
