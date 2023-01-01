@@ -5,8 +5,7 @@ if(!isset($_COOKIE['user_name'])) {
         
 function show($k){
     require 'script/conn.php';
-    $query = "select * from vevent where kategoriEvent = '$k' &&  statusEvent='On Sale' 
-        group by kdevent 
+    $query = "select * from vevent where kategoriEvent = '$k' group by kdevent 
         limit 3";
         $result = mysqli_query($conn, $query);
 

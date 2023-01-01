@@ -26,7 +26,10 @@
         
     <?php
         $kdEvent = $_GET['kdEvent'];
-        $query = "select * from vEvent where kdEvent = '$kdEvent' group by kdEvent";
+        $query = "select kdEvent, namaEvent, fullNameUser,  date_format(tanggalEvent,'%W, %D %M %Y') tanggalEvent,
+                    lokasiEvent,deskripsi,poster,kategoriEvent,kdJenis,jenisTiket,
+                    concat('Rp. ',format(harga,0)) harga
+                    from vEvent where kdEvent = '$kdEvent' group by kdEvent";
         $result = mysqli_query($conn, $query);
         
         while ($row = mysqli_fetch_assoc($result) ) {
@@ -35,7 +38,7 @@
             <div>
                 <p>'.$row['kategoriEvent'].'</p>
                 <h1>'.$row['namaEvent'].'</h1>
-                <p>Uploaded by : <b>'.$row['username'].'</b></p>
+                <p>Uploaded by : <b>'.$row['fullNameUser'].'</b></p>
             </div>
         </div>
 
@@ -58,7 +61,7 @@
                         <p class="label-tix">Total</p>
                     <p class="total">'.$row['harga'].'</p>
                     </div>
-                    <a href="payment.html" class="btn">Checkout</a>
+                    <a href="payment.php?kdJenis='.$row['kdJenis'].'" class="btn">Checkout</a>
                 </div>
             </div>
         </aside>
