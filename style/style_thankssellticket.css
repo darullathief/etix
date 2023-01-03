@@ -207,7 +207,7 @@ footer a{
     
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 600px) {
   
 
     .typography1 {
@@ -216,7 +216,7 @@ footer a{
         font-size: 25px;
         text-align: center;
         margin: auto;
-        padding: 5px 10px 30px;
+        box-sizing: border-box;
     }
 
     .vectorsell {
@@ -236,7 +236,13 @@ footer a{
 
     .tulisanjual {
         order: 2;
-        width: 90%;
+        width: 100%;
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
     }
 
     .tomboljual{
@@ -245,5 +251,6 @@ footer a{
         justify-content: center;
     }
     
+
     
  }
