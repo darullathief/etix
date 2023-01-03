@@ -217,6 +217,8 @@ footer a{
         text-align: center;
         margin: auto;
         box-sizing: border-box;
+        padding: 10px 20px 10px 20px;
+        /*Top Right Bottom Left*/
     }
 
     .vectorsell {
