@@ -28,7 +28,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 </head>
 <body>
     <nav>
-        <img src="img/ETIX LOGO.png"  class="logo">
+    <a href="index.php"> <img src="img/ETIX LOGO.png"  class="logo"> </a>
     </nav>
 
     <div class="container">
@@ -55,15 +55,13 @@ while ($row = mysqli_fetch_assoc($result)) {
                     <input type="date" name="tanggalEvent" class="fr" value ="'.$r["tanggalEvent"].'">';
 
                     do{
-                        echo' 
+                        echo' <div class=inputan>
                             <input type="text" name="kdJenis" style="display: none;" value="'.$row['kdJenis'].'">
                             <input type="text" name="jenisTiket" placeholder="Ticket Category" class="tl" value="'.$row['jenisTiket'].'">
                             <input type="text" name="harga" placeholder="Price" class="tc" value="'.$row['harga'].'">
                             <input type="text" name="kapasitasTiket" placeholder="Amount" class="tr" value="'.$row['kapasitasTiket'].'">
-                            <div class="action">
-                                <a href="#">+</a>
-                                <a href="#">-</a>
-                            </div>';
+                            </div>'
+                            ;
                     } while ($row = mysqli_fetch_assoc($result2));
                    
                     echo'
