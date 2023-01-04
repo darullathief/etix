@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     color: white;
     background-color: #1C0E2F;
@@ -95,6 +95,15 @@ td:last-child{
     height: 30px;
     text-align: center;
     line-height: 40px;
+    
+}
+
+.lst {
+    width: 100px;
+    display: inline-block;
+    background-color: #E6CC00;
+    color: white;
+    text-decoration: none;
 }
 
 .btn-del{
@@ -200,3 +209,56 @@ input[type=file]{
     width: 100%;
     border: 1px solid black;
 }
+
+
+@media screen and (max-width: 600px) {
+  
+
+
+    .summary{
+        flex-direction: column;
+
+    }
+    
+    .summary {
+        width: 100%;
+    }
+
+
+   
+    aside{
+        display: none;
+    }
+
+    .isitulisan{
+        margin-left: 30px;
+    }
+
+   .event-list {
+        overflow: scroll;
+        width: 85%;
+   }
+
+   .container{
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: 100%;
+    }
+
+    .inputan{
+    display: flex;
+    flex-direction: column;
+    }
+
+    .tl{
+        width: 93%;
+    }
+
+    .tc{
+        width: 93%;
+    }
+
+    .tr{
+        width: 93%;
+    }
+ }

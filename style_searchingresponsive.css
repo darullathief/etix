@@ -5,7 +5,6 @@ body {
     font-size: 16px;
     color: white;
     background-color: #2E1452;
-    font-family: 'Poppins', sans-serif;
     }
 
 nav{
@@ -27,14 +26,6 @@ nav .logo {
     margin: 0 30px;
 }
 
-
-.btn{
-    display: inline-block;
-    background-color: #E6CC00;
-    color: #2E1452;
-    text-decoration: none;
-    font-weight: bold;
-}
 
 nav .btn{
     border-radius: 8px;
@@ -124,3 +115,16 @@ h2{
     display: flex;
     justify-content: space-between;
 }
+
+
+@media screen and (max-width: 1080px) {
+
+nav .logo {
+    width: 20%;
+}
+
+.fest{
+    margin-bottom: 20px;
+}
+}
+ 

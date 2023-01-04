@@ -26,6 +26,7 @@ nav .logo {
 .container {
     display: grid;
     grid-template-columns: 300px auto;
+    margin-top: 60px;
 }
 
 
@@ -48,8 +49,8 @@ aside a{
 }
 
 .ticket {
-    margin-top: 100px;
-    margin-left: -100px;
+    margin-top: 30px;
+    margin-left: -40px;
     background-color: #2E1452;
     border-radius: 10px;
     padding: 10px;
@@ -58,6 +59,7 @@ aside a{
 
 .ticket h2{
     color: white;
+    margin-left: 8px;
 }
 
 table{
@@ -99,74 +101,49 @@ td,th{
     border-radius: 10px;
 }
 
-.b {
-    font-weight: bold;
-}
-
-.s {
-    font-weight: bold;
-}
-
-.a {
-    font-weight: bold;
-}
-
-.satu {
+.qty {
     text-align: center;
 }
 
-.dua {
+
+@media screen and (max-width: 600px) {
+    
+
+aside {
+    display: none;
+}
+
+.bp {
+    width: 100%;
+    margin: 0px;
+}
+
+.seventeen {
+    width: 100%;
+    margin: 0px;
+}
+
+.art {
+    width: 100%;
+    margin: 0px;
+}
+
+.ticket {
+    margin-left: 25px;
+    width: 150%;
+    font-size: 75%;
+}
+
+table {
+    margin: 0;
+}
+
+.qty {
     text-align: center;
 }
 
-.tiga {
+.date {
     text-align: center;
+    font-size: 100%;
 }
-
-.d {
-    text-align: center;
-}
-
-.d1 {
-    text-align: center;
-}
-
-.d2 {
-    text-align: center;
-}
-
-.vt {
-    color: #E6CC00;
-    text-decoration: underline;
-    display: inline;
-}
-
-.dt {
-    color: #E6CC00;
-    text-decoration: underline;
-    display: inline;
-}
-
-.vt1 {
-    color: #E6CC00;
-    text-decoration: underline;
-    display: inline;
-}
-
-.dt1 {
-    color: #E6CC00;
-    text-decoration: underline;
-    display: inline;
-}
-
-.vt2 {
-    color: #E6CC00;
-    text-decoration: underline;
-    display: inline;
-}
-
-.dt2 {
-    color: #E6CC00;
-    text-decoration: underline;
-    display: inline;
 }

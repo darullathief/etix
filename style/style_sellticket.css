@@ -1,0 +1,267 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: white;
+    background-color: #1C0E2F;
+}
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2E1452;
+    top: 0;
+    z-index: 99;
+    height: 50px;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+nav .logo {
+    width: 70px;
+    margin: 0 30px;
+}
+
+.btn{
+    display: inline-block;
+    background-color: #E6CC00;
+    color: #2E1452;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+nav .btn{
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 0 10px 0;
+}
+
+.jumbotron {
+    display: flex;
+    align-items: flex-end;
+    background-color: #2E1452;
+    margin-top: -17px;
+    height: 300px;
+    padding: 0 50px 20px;
+}
+
+.jumbotron div{
+    width: 60%;
+}
+
+aside{
+    background-color: #3D1C6A;
+    width: 25%;
+    position: absolute;
+    top: 200px;
+    right: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ticket{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2E1452;
+    padding: 10px 15px;
+    margin: 14px 0 0;
+    border-radius: 8px;
+}
+
+.label-tix{
+    font-size: 12px;
+    color: #C1C1C1;
+    margin: 0;
+}
+
+.price-tix{
+    font-size: 18px;
+    margin: 0;
+}
+
+.ticket .btn{
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.total-est {
+    margin: 30px -8% -8%;
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2E1452;
+    box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.2);;
+    padding: 10px 30px 20px;
+}
+
+.total-est .btn{
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.content{
+    width: 60%;
+    padding: 20px 50px;
+}
+
+.thumbnail{
+    max-width: 100%;
+}
+
+/* footer{
+    background-color: #2E1452;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 48px;
+    font-weight: bold;
+} */
+
+/* Payment */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2E1452;
+    padding: 15px 0 40px;
+    margin-top: 40px;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.btn-socmed{
+    display: block;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #E6CC00;
+    color: #2E1452;
+    border-radius: 10px;
+}
+
+.jualticket{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 80px 50px ;
+}
+
+.vectorsell{
+    margin-top: 30px;
+    width: 40%;
+    align-items: center;
+}
+
+
+.tulisanjual{
+    text-align: left;
+    font-size: 20px;
+    margin-left: 20px;
+    width: 50%;
+
+
+}
+
+.jual{
+    border-radius: 15px;
+    padding: 10px;
+
+}
+
+.jual2{
+    border-radius: 15px;
+    padding: 10px;
+    margin-left: 10px;
+    background-color:#49227e ;
+    color: white;
+}
+
+.tomboljual{
+    flex-direction:row;
+    display: flex;
+}
+
+.typography1{
+    font-family: etixFont;
+    text-align: left;
+    font-size: 40px;
+    font-variant-caps:all-petite-caps;
+    
+}
+
+@media screen and (max-width: 600px) {
+  
+
+    .typography1 {
+        width: 100%;
+        order: 2;
+        font-size: 25px;
+        text-align: center;
+        margin: auto;
+        box-sizing: border-box;
+        padding: 10px 30px 10px 30px;
+        /*Top Right Bottom Left*/
+    }
+
+    .vectorsell {
+        order: 1;
+        width:50%;
+        align-items: center;
+        margin: auto;
+    }
+
+    .jualticket {
+        grid-template-columns: 100%;
+        display: grid;
+        width: 100%;
+        margin: auto;
+        padding-top: 90px;
+    }
+
+    .tulisanjual {
+        order: 2;
+        width: 100%;
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .tomboljual{
+        align-items: center;
+        margin: auto;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .jual2{
+        margin-top: 10px;
+    }
+
+    p {
+        text-align: center;
+        font-size: 15px;
+        padding: 10px 30px 10px 30px;
+    }
+ }

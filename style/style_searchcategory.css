@@ -1,0 +1,415 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: white;
+    background-color: #2E1452;
+}
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2E1452;
+    top: 0;
+    z-index: 99;
+    height: 50px;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+nav .logo {
+    width: 70px;
+    margin: 0 30px 0 0;
+}
+
+.btn{
+    display: inline-block;
+    background-color: #E6CC00;
+    color: #2E1452;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+nav .btn{
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 0 10px 0;
+}
+
+.typography1{
+    font-family: etixFont;
+    text-align: center;
+    margin-top: 120px ;
+    font-size: 44px ;
+}
+
+
+input[type=text] {
+    width: 50%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    background-image: url('/img/searchicon.png');
+    padding: 12px 20px 12px 40px;
+    display: block;
+    margin:auto;
+  }
+
+input[type=submit] {
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 0 10px 0;
+    border:none;
+    display: block;
+    position:relative;
+    top: -42px;
+    left: 985px;
+}
+
+.formsearch{
+    width: 70%;
+    margin-top: 3px;
+}
+
+
+.content1{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 50% 37%;
+    justify-content:space-evenly;
+    align-items: center;
+    align-self: left;
+    margin: auto;
+    place-items: center;
+}
+
+.tulisangambar1{
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+}
+
+.tulisangambar1 h2 {
+    margin-bottom: 0%;
+}
+
+.tulisangambar1 img{
+    width: 344px;
+    height: 213;
+    border-radius: 10px;
+}
+
+.tulisan1{
+    text-align: center;
+    margin-top: 60px ;
+    font-size: 20px ;
+}
+
+.imgcard{
+    width : 100%;
+    border-radius: 15px;
+}
+
+.card{
+    width: 100%;
+    margin: 50px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 15px ;
+    padding: 10px 10px 10px;
+    text-align: center;
+}
+
+.intro{
+    color: #2E1452;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 30px ;
+}
+
+.subtulisan1{
+    text-align:left;
+    margin-top: 40px ;
+    font-size: 20px ;
+    margin-left: 70px;
+}
+
+.container2{
+    justify-content: space-around;
+}
+
+.card2{
+    width: 30%;
+    height: 220px;
+    margin: 10px;
+    display: inline-block;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 15px ;
+}
+
+.card2 p{
+    position: relative;
+    z-index: 4;
+    background-color: #E6CC00;
+    top: -65px;
+    padding: 3px 15px 10px;
+    width: 150px;
+    border-radius: 0px 10px 0px 0px;
+    color: #2E1452;
+}
+
+.imgcard2{
+    width : 100%;
+    border-radius: 15px;
+}
+
+.bodytengah{
+    background-color: #49227E;
+    padding-top: 10px;
+    padding-bottom: 60px;
+}
+
+.subtulisan2{
+    text-align:left;
+    margin-top: 60px ;
+    font-size: 20px ;
+    margin-left: 70px;
+}
+
+.subsubtulisan2a{
+    text-align:left;
+    margin-top: 10px ;
+    font-size: 20px ;
+    margin-left: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.topselling{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cardticket{
+    background-color: #D9D9D9;
+    border-radius : 15px ;
+    padding: 10px 10px ;
+    width: 390px;
+    height: 415px;
+    margin-left: 20px;
+    box-shadow: 5px 5px 20px black;
+}
+
+.imgticket{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.imgticket1{
+    width: 100%;
+    height: 54%;
+    border-radius: 15px;
+}
+
+.imgticket2{
+    width: 100%;
+    height: 55%;
+    border-radius: 20px;
+}
+
+.shapesdesc{
+    background-color: white;
+    border-radius: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 7px 15px 7px;
+    margin-top: 10px;
+}
+
+.descticket{
+    color: #2E1452;
+    text-align: center;
+    border-bottom: 1px solid #2E1452;
+    padding: 5px 5px 5px;
+}
+
+.descpriceticket{
+    color: #2E1452;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.vectorsell{
+    margin-top: 20px;
+    width: 20%;
+    align-items: center;
+}
+
+@font-face {
+    font-family: etixFont ;
+    src: url(/font/Etix.ttf) format('opentype');
+}
+
+@font-face {
+    font-family:"Poppins";
+    src: url(/font/Poppins.ttf) format('truettype');
+}
+
+.warnafont{
+    color: #E6CC00;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2E1452;
+    padding: 15px 0 40px;
+    margin-top: 40px;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.btn-socmed{
+    display: block;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #E6CC00;
+    color: #2E1452;
+    border-radius: 10px;
+}
+
+.jualticket{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tulisanjual{
+    text-align: left;
+    font-size: 20px;
+    margin-left: 20px;
+
+}
+
+.jual{
+    border-radius: 15px;
+    padding: 10px;
+    margin-left: 30px;
+
+}
+
+a { 
+    text-decoration: none;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.subsubtulisan2a p {
+    display: inline;
+    line-height: 40px;
+}
+
+.navitem{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .topselling {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .bodytengah{
+        background-size: 100px;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    .logo {
+        width: 10%;
+    }
+
+    .formsearch{
+        display: none;
+    }
+
+    .pencarian {
+        display: block;
+        margin-top: 100px;
+        width: 170%;
+        margin-left: -210px;
+    }
+
+    .subsubtulisan2a{
+        margin: 5px;
+        margin-top: -32px;
+        margin-inline: 30px;
+    }
+
+   .cardticket {
+        margin: 30px;
+        margin-top: 10px;
+        margin-inline: 70px;
+   }
+   
+   .jualticket{
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+   }
+
+   .tulisanjual {
+    text-align: center;
+    font-size: 25px;
+    margin-left: 2px;
+   }
+
+   .vectorsell {
+    width: 40%;
+    align-items: center;
+    margin: auto;
+   }
+}
