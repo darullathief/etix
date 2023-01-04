@@ -223,6 +223,18 @@ input[type=submit] {
     border-radius: 15px;
 }
 
+.imgticket1{
+    width: 100%;
+    height: 54%;
+    border-radius: 15px;
+}
+
+.imgticket2{
+    width: 100%;
+    height: 55%;
+    border-radius: 20px;
+}
+
 .shapesdesc{
     background-color: white;
     border-radius: 15px;
@@ -341,3 +353,63 @@ a {
     margin: 0 10px;
 }
 
+@media screen and (max-width: 600px) {
+
+    .topselling {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .bodytengah{
+        background-size: 100px;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    .logo {
+        width: 10%;
+    }
+
+    .formsearch{
+        display: none;
+    }
+
+    .pencarian {
+        display: block;
+        margin-top: 100px;
+        width: 170%;
+        margin-left: -210px;
+    }
+
+    .subsubtulisan2a{
+        margin: 5px;
+        margin-top: -32px;
+        margin-inline: 30px;
+    }
+
+   .cardticket {
+        margin: 30px;
+        margin-top: 10px;
+        margin-inline: 70px;
+   }
+   
+   .jualticket{
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+   }
+
+   .tulisanjual {
+    text-align: center;
+    font-size: 25px;
+    margin-left: 2px;
+   }
+
+   .vectorsell {
+    width: 40%;
+    align-items: center;
+    margin: auto;
+   }
+}

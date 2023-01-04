@@ -98,3 +98,50 @@ td,th{
     width: 200px;
     border-radius: 10px;
 }
+
+.qty {
+    text-align: center;
+}
+
+
+@media screen and (max-width: 600px) {
+    
+
+aside {
+    display: none;
+}
+
+.bp {
+    width: 100%;
+    margin: 0px;
+}
+
+.seventeen {
+    width: 100%;
+    margin: 0px;
+}
+
+.art {
+    width: 100%;
+    margin: 0px;
+}
+
+.ticket {
+    margin-left: 25px;
+    width: 150%;
+    font-size: 75%;
+}
+
+table {
+    margin: 0;
+}
+
+.qty {
+    text-align: center;
+}
+
+.date {
+    text-align: center;
+    font-size: 100%;
+}
+}

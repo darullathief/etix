@@ -8,12 +8,14 @@ $lokasiEvent        = $_GET['lokasiEvent'];
 $kategoriEvent      = $_GET['kategoriEvent'];
 $username = $_COOKIE['user_name'];
 
-$sql = "INSERT INTO event (kdEvent,username,namaEvent,tanggalEvent,lokasiEvent,statusEvent)
-        VALUES('$kdEvent','$username','$namaEvent','$tanggalEvent','$lokasiEvent','On Review')";
+$sql = "INSERT INTO event (kdEvent,username,namaEvent,tanggalEvent,lokasiEvent,statusEvent,kategoriEvent)
+        VALUES('$kdEvent','$username','$namaEvent','$tanggalEvent','$lokasiEvent','On Review', '$kategoriEvent')";
 
-mysqli_query($conn,$sql);
-echo $kdEvent;
-echo $namaEvent;
-header("Location: ../thankssellticket.html"); 
+
+if (mysqli_query($conn, $sql)) {
+        header("Location: ../thankssellticket.html"); 
+} else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
 
 ?>

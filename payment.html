@@ -13,11 +13,12 @@
 <body>
     <div class="container">
         <div class="payment">
-            <div class="card">
+            <div class="card conf">
                 <h2>Payment Confirmation</h2>
                 <form action="">
-                    <input type="text" name="" placeholder="Fullname">
-                    <input type="text" name="norek" placeholder="Account Number">
+                    <input type="text" name="" placeholder="Fullname" class="fullname">
+                    <input type="text" name="norek" placeholder="Account Number" class="number">
+                    <div class="method">
                     <select name="" >
                         <option value="" selected disabled>Payment Method</option>
                         <option value="BNI">BNI</option>
@@ -25,15 +26,16 @@
                         <option value="Dana">Dana</option>
                         <option value="Shopeepay">Shopeepay</option>
                     </select>
+                </div>
                     <div class="fileup">
                         <p>Evidence</p>
                         <input type="file" name="" id=""></div>
 
-                    <input type="submit" value="Corfirm" class="btn">
+                    <input type="submit" value="Confirm" class="btn">
                 </form>
             </div>
             
-            <div class="card">
+            <div class="card guide">
                 <h2>Payment Guide</h2>
                 <ol>
                     <li>Isi data pemesanan tiket.</li>
@@ -46,7 +48,7 @@
         </div>
 
         <aside>
-            <div class="side">
+            <div class="side order">
                 <h2>Order <Summary></Summary></h2>
                 <p class="title">NFL Super Bowl LVII Tickets</p>
                 <div class="summary">
@@ -59,7 +61,7 @@
                 </div>
             </div>
 
-            <div class="side">
+            <div class="side rek">
                 <h2>Rekening Pembayaran</h2>
                 <p class="item">BCA : 121212121212121212</p>
                 <p class="item">BNI : 121212121212121212</p>
