@@ -1,8 +1,8 @@
 <?php
 require "conn.php";
 
-$GLOBALS['username'] = $_POST['username'];
-$GLOBALS['password'] = $_POST['password'];
+$username = $_POST['username'];
+$password = $_POST['password'];
 
 $query = "select username, password from user";
 $result = mysqli_query($conn, $query);
@@ -10,7 +10,7 @@ $result = mysqli_query($conn, $query);
 while ($row = mysqli_fetch_assoc($result) ) {
     if ($row['username'] == $username) {
         if ($row['password'] == $password) {
-            setcookie('user_name', $username, time() + 30, "/");
+            setcookie('user_name', $username, time() + (86400 * 30), "/");
             setcookie('pass', $password, time() + (86400 * 30), "/");
             header('Location: ../index.php');
         } else {

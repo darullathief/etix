@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav>
-        <img src="img/ETIX LOGO.png"  class="logo">
+        <a href="index.php"><img src="img/ETIX LOGO.png"  class="logo"></a>
     </nav>
 
     <div class="container">
@@ -24,7 +24,8 @@
         <h2>Event List</h2>
             <?php
              require 'script/conn.php';
-                $query = "select * from event";
+                $username = $_COOKIE['user_name'];
+                $query = "select * from event where username ='$username'";
                 $result = mysqli_query($conn, $query);
                 
                 $rows= [];
@@ -61,7 +62,7 @@
                                echo '<td><a href="edit_event.php?kd_event='.$r['kdEvent'].'" class="btn"><span class="material-symbols-outlined">
                                     edit
                                     </span></a>
-                                    <a href="#" class="btn btn-del"><span class="material-symbols-outlined">
+                                    <a href="script/delete_event.php?kd_event='.$r['kdEvent'].'" class="btn btn-del"><span class="material-symbols-outlined">
                                     delete
                                     </span></a></td></tr>';
                             }

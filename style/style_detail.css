@@ -156,3 +156,10 @@ footer a{
     color: #2E1452;
     border-radius: 10px;
 }
+
+.navitem{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin: 0 10px;
+}

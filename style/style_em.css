@@ -209,3 +209,56 @@ input[type=file]{
     width: 100%;
     border: 1px solid black;
 }
+
+
+@media screen and (max-width: 600px) {
+  
+
+
+    .summary{
+        flex-direction: column;
+
+    }
+    
+    .summary {
+        width: 100%;
+    }
+
+
+   
+    aside{
+        display: none;
+    }
+
+    .isitulisan{
+        margin-left: 30px;
+    }
+
+   .event-list {
+        overflow: scroll;
+        width: 85%;
+   }
+
+   .container{
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: 100%;
+    }
+
+    .inputan{
+    display: flex;
+    flex-direction: column;
+    }
+
+    .tl{
+        width: 93%;
+    }
+
+    .tc{
+        width: 93%;
+    }
+
+    .tr{
+        width: 93%;
+    }
+ }

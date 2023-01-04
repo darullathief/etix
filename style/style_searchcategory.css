@@ -22,7 +22,7 @@ nav{
 
 nav .logo {
     width: 70px;
-    margin: 0 30px;
+    margin: 0 30px 0 0;
 }
 
 .btn{
@@ -31,7 +31,6 @@ nav .logo {
     color: #2E1452;
     text-decoration: none;
     font-weight: bold;
-
 }
 
 
@@ -207,6 +206,7 @@ input[type=submit] {
 .topselling{
     display:flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .cardticket{
     background-color: #D9D9D9;

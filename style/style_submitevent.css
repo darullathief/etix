@@ -73,3 +73,15 @@ select {
     box-sizing: border-box;
     border-radius: 10px;
 }
+
+@media screen and (max-width: 600px) {
+  
+    .container{
+        width: 60%;
+    }
+
+    .submitbtn{
+        width: 100%;
+    }
+    
+ }
