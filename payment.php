@@ -30,13 +30,14 @@ $result = mysqli_query($conn, $query);
 <body>
     <div class="container">
         <div class="payment">
-            <div class="card">
+            <div class="card conf">
                 <h2>Payment Confirmation</h2>
                 <form action="script/payment.php" enctype="multipart/form-data" method="post">
                     <input type="hidden" name="kdJenis" value=<?php echo $kdJenis;?>>
                     <input type="hidden" name="total" value=<?php  echo $total;?>>
-                    <input type="text" name="fullname" placeholder="Fullname">
-                    <input type="text" name="norek" placeholder="Account Number">
+                    <input type="text" name="fullname" placeholder="Fullname" class="fullname">
+                    <input type="text" name="norek" placeholder="Account Number" class="number">
+                    <div class="method">
                     <select id="payment" name="payment_method">
                         <option value="none" selected disabled>Payment Method</option>
                         <option value="BNI">BNI</option>
@@ -44,6 +45,7 @@ $result = mysqli_query($conn, $query);
                         <option value="Dana">Dana</option>
                         <option value="Shopeepay">Shopeepay</option>
                     </select>
+                </div>
                     <div class="fileup">
                         <p>Evidence</p>
                         <input type="file" name="evidence"></div>
@@ -52,7 +54,7 @@ $result = mysqli_query($conn, $query);
                 </form>
             </div>
             
-            <div class="card">
+            <div class="card guide">
                 <h2>Payment Guide</h2>
                 <ol>
                     <li>Isi data pemesanan tiket.</li>
@@ -65,7 +67,7 @@ $result = mysqli_query($conn, $query);
         </div>
 
         <aside>
-            <div class="side">
+            <div class="side order">
                 <h2>Order Summary</h2>
                 <?php
                     while ($row = mysqli_fetch_assoc($result) ) {
@@ -82,7 +84,7 @@ $result = mysqli_query($conn, $query);
                 ?>
             </div>
 
-            <div class="side">
+            <div class="side rek">
                 <h2>Rekening Pembayaran</h2>
                 <p class="item">BCA : 121212121212121212</p>
                 <p class="item">BNI : 121212121212121212</p>

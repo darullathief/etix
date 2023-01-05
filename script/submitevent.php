@@ -8,6 +8,7 @@ $lokasiEvent        = $_GET['lokasiEvent'];
 $kategoriEvent      = $_GET['kategoriEvent'];
 $username = $_COOKIE['user_name'];
 
+
 if ($kategoriEvent == "Music") {
   $kdEvent = "M$kdEvent";
 } else if ($kategoriEvent == "Sport") {
@@ -18,6 +19,7 @@ if ($kategoriEvent == "Music") {
 
 $sql = "INSERT INTO event (kdEvent,username,namaEvent,tanggalEvent,lokasiEvent,statusEvent,kategoriEvent)
         VALUES('$kdEvent','$username','$namaEvent','$tanggalEvent','$lokasiEvent','On Review', '$kategoriEvent')";
+
 
 if (mysqli_query($conn, $sql)) {
         header("Location: ../thankssellticket.html"); 

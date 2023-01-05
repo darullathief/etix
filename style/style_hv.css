@@ -64,15 +64,34 @@ aside a:hover{
 .card{
     background-color: #2E1452;
     border-radius: 10px;
-    padding: 10px;
-    height: 100px;
-    width: 30%;
+    padding: 20px;
+    height: 130px;
+    width: 28%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    box-sizing: border-box;
+}
+
+.card2{
+    background-color: #2E1452;
+    border-radius: 10px;
+    padding: 20px;
+    height: 130px;
+    width: 39%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    box-sizing: border-box;
 }
 
 .p{
     font-size: 36px;
     margin: 0;
+    font-family: 'Poppins ExtraBold';
+    color:yellow;
 }
+
 
 .event-list{
     margin: 30px;
@@ -99,3 +118,70 @@ tr{
 td,th{
     padding: 15px 5px 15px 10px;
 }
+
+.iconsum{
+    width: 25%;
+}
+
+.isitulisan{
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  
+
+
+    .summary{
+        flex-direction: column;
+
+    }
+    
+    .summary {
+        width: 100%;
+    }
+
+    .card{
+        background-color: #2E1452;
+        border-radius: 10px;
+        padding: 20px;
+        height: 180px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+        box-sizing: border-box;
+        margin-bottom: 50px;
+    }
+
+    .card2{
+        background-color: #2E1452;
+        border-radius: 10px;
+        padding: 20px;
+        height: 180px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+        box-sizing: border-box;
+        margin-bottom: 50px;
+    }
+    
+    aside{
+        display: none;
+    }
+
+    .isitulisan{
+        margin-left: 30px;
+    }
+
+   .event-list {
+        overflow: scroll;
+        width: 85%;
+   }
+
+   .container{
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: 100%;
+}
+ }

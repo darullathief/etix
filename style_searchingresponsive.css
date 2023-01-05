@@ -27,14 +27,6 @@ nav .logo {
 }
 
 
-.btn{
-    display: inline-block;
-    background-color: #E6CC00;
-    color: #2E1452;
-    text-decoration: none;
-    font-weight: bold;
-}
-
 nav .btn{
     border-radius: 8px;
     padding: 10px 15px;
@@ -123,3 +115,16 @@ h2{
     display: flex;
     justify-content: space-between;
 }
+
+
+@media screen and (max-width: 1080px) {
+
+nav .logo {
+    width: 20%;
+}
+
+.fest{
+    margin-bottom: 20px;
+}
+}
+ 

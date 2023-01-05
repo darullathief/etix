@@ -32,7 +32,7 @@ while ($row = mysqli_fetch_assoc($result2)) {
 </head>
 <body>
     <nav>
-        <img src="img/ETIX LOGO.png"  class="logo">
+    <a href="index.php"> <img src="img/ETIX LOGO.png"  class="logo"> </a>
     </nav>
 
     <div class="container">
