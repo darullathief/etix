@@ -206,3 +206,16 @@ footer a{
     font-variant-caps:all-petite-caps;
     
 }
+
+.navitem{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.navicon{
+    display: inline-block;
+    width: 30px;
+    line-height: 30px;
+}

@@ -14,11 +14,19 @@
 <body>
     <nav>
         <a href="landingpage.html"><img src="img/ETIX LOGO.png" class="logo" alt="logo"></a>
-        <div>
-            <a href="payment_history.html" class="navitem">Transaction</a>
-            <a href="event_management.php" class="navitem">My Event</a>
-            <a href="myticket.html" class="navitem">My Ticket</a>
-            <a href="profile.html" class="navitem">Profile</a>
+            <div>
+            <input type="checkbox" id="hamburger">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <div class="menu-item">
+                <a href="payment_history.html" class="navitem"><img src="icon/TRANSACTION.png" class="navicon"><span>Transaction</span></a>
+                <a href="event_management.php" class="navitem"><img src="icon/MYEVENT.png" class="navicon"><span>My Event</span></a>
+                <a href="myticket.html" class="navitem"><img src="icon/MYTICKET.png" class="navicon"><span>My Ticket</span></a>
+                <a href="profile.html" class="navitem"><img src="icon/PROFILE.png" class="navicon"><span>Profile</span></a>
+            </div>
         </div>
     </nav>
 
@@ -43,8 +51,10 @@
         </div>
 
         <aside>
-            <p>'.$row['tanggalEvent'].'</p>
-            <p>'.$row['lokasiEvent'].'</p>
+            <div class="ket">
+                <p>'.$row['tanggalEvent'].'</p>
+                <p>'.$row['lokasiEvent'].'</p>
+            </div>
             <h2>Ticket Category</h2>
             <div class="cat-ticket">
                 <!-- Kategori 1 -->

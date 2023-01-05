@@ -38,7 +38,7 @@ $query2 = "insert into orderdetail values
             ('$kdtiket','$kdPemesanan')";
 
 if (mysqli_query($conn, $query2)) {
-    // header("Location: ../thankssellticket.html"); 
+    header("Location: ../thankssellticket.html"); 
 } else {
     echo "Error: " . $query2 . "<br>" . mysqli_error($conn);
 }
