@@ -206,10 +206,20 @@ footer a{
     font-variant-caps:all-petite-caps;
     
 }
+.navitem{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.navicon{
+    display: inline-block;
+    width: 30px;
+    line-height: 30px;
+}
 
 @media screen and (max-width: 600px) {
-  
-
     .typography1 {
         width: 100%;
         order: 2;
@@ -252,7 +262,4 @@ footer a{
         margin: auto;
         justify-content: center;
     }
-    
-
-    
  }

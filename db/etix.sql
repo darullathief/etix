@@ -180,7 +180,19 @@ CREATE TABLE IF NOT EXISTS `vevent` (
 ,`kapasitasTiket` int(3)
 );
 
+CREATE view vevent as
+select(kdEvent,namaEvent, fullNameUser, 
+date_format(tanggalEvent,"%W, %M %D %Y") as tanggalEvent,
+lokasiEvent,deskripsi,poster,kategoriEvent,kdJenis,jenisTiket,harga)
+from event join user join ticketchategory
+where statusEvent = 'On Sale';
+
 -- --------------------------------------------------------
+CREATE view vevent as
+select e.kdEvent, namaEvent, fullNameUser, tanggalEvent,
+lokasiEvent,deskripsi,poster,kategoriEvent,kdJenis,jenisTiket,harga
+from user NATURAL join event e NATURAL join ticketchategory t
+where statusEvent='On Sale';
 
 --
 -- Structure for view `vevent`

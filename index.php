@@ -5,8 +5,7 @@ if(!isset($_COOKIE['user_name'])) {
         
 function show($k){
     require 'script/conn.php';
-    $query = "select * from vevent where kategoriEvent = '$k' &&  statusEvent='On Sale' 
-        group by kdevent 
+    $query = "select * from vevent where kategoriEvent = '$k' group by kdevent 
         limit 3";
         $result = mysqli_query($conn, $query);
 
@@ -42,12 +41,20 @@ function show($k){
 </head>
 <body>
     <nav>
-        <a href="index.php"><img src="img/ETIX LOGO.png" class="logo" alt="logo"></a>
-        <div>
-            <a href="payment_history.html" class="navitem">Transaction</a>
-            <a href="event_management.php" class="navitem">My Event</a>
-            <a href="myticket.html" class="navitem">My Ticket</a>
-            <a href="profile.html" class="navitem">Profile</a>
+        <a href="landingpage.html"><img src="img/ETIX LOGO.png" class="logo" alt="logo"></a>
+            <div>
+            <input type="checkbox" id="hamburger">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <div class="menu-item">
+                <a href="payment_history.html" class="navitem"><img src="icon/TRANSACTION.png" class="navicon"><span>Transaction</span></a>
+                <a href="event_management.php" class="navitem"><img src="icon/MYEVENT.png" class="navicon"><span>My Event</span></a>
+                <a href="myticket.html" class="navitem"><img src="icon/MYTICKET.png" class="navicon"><span>My Ticket</span></a>
+                <a href="profile.html" class="navitem"><img src="icon/PROFILE.png" class="navicon"><span>Profile</span></a>
+            </div>
         </div>
     </nav>
         <div class="typography1">
@@ -60,7 +67,7 @@ function show($k){
         <div class="formsearch">
             <form> 
                 <input type="text" name="Search for artist or event" placeholder="Search for artist or event...">
-                <input type="submit" value="Search" class="btn">
+                <input type="submit" value="Search" class="btn btn-search">
             </form>
         </div> 
 
@@ -73,10 +80,12 @@ function show($k){
     </div>
 
         <div class="tulisangambar1">
-            <h2> Born Pink Sale up to
-                <br> 50% for new user! </h2>
-            <p> Get this sale by sign
-               <br> in to your account. </p>
+            <div>
+                <h2> Born Pink Sale up to
+                    <br> 50% for new user! </h2>
+                <p> Get this sale by sign
+                <br> in to your account. </p>
+            </div>
             <img src="img/bpink.jpeg">
         </div>
     </div>
@@ -137,7 +146,7 @@ function show($k){
                 <p> Sports </p>
             </div></a>
     
-            <a href="searchcategory.html?kategori=Arts & Theatre">
+            <a href="searchcategory.html?kategori=Arts">
             <div class="card2">
                 <img class="imgcard2" src="img/browseart.jpeg" alt="Art">
                 <p> Arts & Theater</p></a>

@@ -48,13 +48,19 @@ nav .btn{
 }
 
 
+.formsearch{
+    margin: auto;
+    width: 60%;
+}
+
 input[type=text] {
-    width: 50%;
+    width: 100%;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    background-position: 10px 10px; 
+    background-position: 5px 5px;
+    background-size: 30px; 
     background-repeat: no-repeat;
     background-image: url('/img/searchicon.png');
     padding: 12px 20px 12px 40px;
@@ -68,9 +74,12 @@ input[type=submit] {
     margin: 0 10px 0;
     border:none;
     display: block;
+}
+
+.btn-search{
     position:relative;
     top: -42px;
-    left: 985px;
+    right: -86%;
 }
 
 .videoyt{
@@ -78,7 +87,6 @@ input[type=submit] {
     height: 281px;
     margin-left: 50px;
     box-shadow: 50px 30px 30px white;
-
     justify-self: end;
 }
 
@@ -208,14 +216,16 @@ input[type=submit] {
 .topselling{
     display:flex;
     justify-content: center;
+    overflow: hidden;
 }
 .cardticket{
     background-color: #D9D9D9;
     border-radius : 15px ;
     padding: 10px 10px ;
-    width: 390px;
+    max-width: 390px;
+    min-width: 340px;
     height: 415px;
-    margin-left: 20px;
+    margin: 0 20px;
     box-shadow: 5px 5px 20px black;
 }
 
@@ -255,7 +265,7 @@ input[type=submit] {
 
 @font-face {
     font-family: etixFont ;
-    src: url(/font/Etix.ttf) format('opentype');
+    src: url(../font/Etix.ttf) format('opentype');
 }
 
 @font-face {
@@ -274,6 +284,7 @@ footer {
     background-color: #2E1452;
     padding: 15px 0 40px;
     margin-top: 40px;
+    flex-wrap: wrap;
 }
 
 ul{
@@ -340,4 +351,280 @@ a {
     color: white;
     font-size: 18px;
     margin: 0 10px;
+}
+
+.navicon{
+    display: inline-block;
+    width: 30px;
+    line-height: 30px;
+}
+
+#hamburger{
+    display: none;
+}
+
+.hamburger-lines{
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .typography1 h1{
+        font-size: 56px;
+    }
+    
+    .formsearch{
+        margin: auto;
+        width: 80%;
+    }
+    
+    .btn-search{
+        right: -83%;
+    }
+    
+    .content1{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin-left: 0;
+     }
+     
+     .videoyt{
+        justify-self: center;
+        margin-left: -50px;
+     }
+
+    .tulisangambar1{
+        flex-direction: row;
+        width: 70%;
+        margin-top: 50px;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns:  50% 50%;
+        padding: 0 30px;
+        place-items: center;
+    }
+    
+    .card{
+        width: 80%;
+        margin: 20px 0;
+    }
+
+    .container2{
+        display: grid;
+        grid-template-columns: 90%;
+        
+    }
+
+    .card2{
+        width: 100%;
+        height: 77%;
+        margin: 10px 0;
+    }
+
+    .jualticket{
+        flex-direction: column;
+    }
+
+    .vectorsell{
+        width: 50%;
+    }
+
+    .navitem span{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    nav{
+        width: 100%;
+    }
+
+    .typography1 h1{
+        font-size: 56px;
+    }
+
+    .formsearch { 
+       width: 90%;
+    }
+    .formsearch .btn{
+        display: none;
+    }
+
+    .videoyt {
+        margin-top: 30px;
+        margin-left: 0;
+        width: 87%;
+        box-shadow: 20px 30px 30px white;
+    }
+    .videoyt iframe{
+        width: 100%; 
+    }
+    
+    .tulisangambar1{
+        flex-direction: column;
+        margin-left: -40px; 
+    }
+    
+    .tulisangambar1 img{
+        width: 100%;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: 40% 40%;
+        grid-gap: 15px;
+        font-size: 0.7em;
+    }
+
+    .card{
+        margin: 20px 0;
+    }
+
+    .subtulisan1{
+        margin: 0;
+        padding: 0 20px;
+    }
+    .container2{
+        display: grid;
+        grid-template-columns: 90%;
+        grid-gap: 0px;
+    }
+
+    .card2{
+        width: 100%;
+        height: 72%;
+        margin-bottom: 0;
+    }
+
+
+    .topselling{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 20px;
+    }
+
+    .subtulisan2{
+        margin-left: 20px;
+    }
+    
+    .subsubtulisan2a{
+        margin-left: 20px;
+    }
+
+    .cardticket {
+        margin: auto;
+    }
+    
+    .tulisanjual{
+        text-align: center;
+    }
+    #hamburger:checked ~ .menu-item{
+        display: flex;
+        right: 0;
+    }
+    .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+      }
+    
+      .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+      }
+    
+      .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+      }
+        
+        input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+        transform: rotate(35deg);
+      }
+    
+      input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+        transform: scaleY(0);
+      }
+    
+      input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+            transform: rotate(-35deg);
+      }
+    
+      .menu-item{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #2E1452;
+            padding-left: 20px;
+            padding-top: 40px;
+            top: 350px;
+            right: -270px;
+            height: 100vh;
+            width: 250px;
+            transition: all .8s ease-in-out;
+    }
+
+
+    .navitem span{
+        display: inline-block;
+        margin: 15px 10px;
+    }
+
+    .hamburger-lines{
+        display: block;
+        z-index: 100;
+    }
+    
+    .hamburger-lines {
+        display: block;
+        height: 23px;
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+  }
+    
+    .line{
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #fff;
+    }
+    
+    #hamburger {
+        position: absolute;
+        display: block;
+        height: 40px;
+        width: 40px;
+        top: 10px;
+        right: 20px;
+        z-index: 100;
+        opacity: 0;
+  }
+    
+    footer div{
+        min-width: 40%;
+        text-align: center;
+        margin-top: 15px;
+    }
+    
+    footer div:nth-child(5){
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 15px;
+        align-items: center;
+    }
+
 }

@@ -14,11 +14,19 @@
 <body>
     <nav>
         <a href="landingpage.html"><img src="img/ETIX LOGO.png" class="logo" alt="logo"></a>
-        <div>
-            <a href="payment_history.html" class="navitem">Transaction</a>
-            <a href="event_management.php" class="navitem">My Event</a>
-            <a href="myticket.html" class="navitem">My Ticket</a>
-            <a href="profile.html" class="navitem">Profile</a>
+            <div>
+            <input type="checkbox" id="hamburger">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <div class="menu-item">
+                <a href="payment_history.html" class="navitem"><img src="icon/TRANSACTION.png" class="navicon"><span>Transaction</span></a>
+                <a href="event_management.php" class="navitem"><img src="icon/MYEVENT.png" class="navicon"><span>My Event</span></a>
+                <a href="myticket.html" class="navitem"><img src="icon/MYTICKET.png" class="navicon"><span>My Ticket</span></a>
+                <a href="profile.html" class="navitem"><img src="icon/PROFILE.png" class="navicon"><span>Profile</span></a>
+            </div>
         </div>
     </nav>
 
@@ -26,7 +34,10 @@
         
     <?php
         $kdEvent = $_GET['kdEvent'];
-        $query = "select * from vEvent where kdEvent = '$kdEvent' group by kdEvent";
+        $query = "select kdEvent, namaEvent, fullNameUser,  date_format(tanggalEvent,'%W, %D %M %Y') tanggalEvent,
+                    lokasiEvent,deskripsi,poster,kategoriEvent,kdJenis,jenisTiket,
+                    concat('Rp. ',format(harga,0)) harga
+                    from vEvent where kdEvent = '$kdEvent' group by kdEvent";
         $result = mysqli_query($conn, $query);
         
         while ($row = mysqli_fetch_assoc($result) ) {
@@ -35,13 +46,15 @@
             <div>
                 <p>'.$row['kategoriEvent'].'</p>
                 <h1>'.$row['namaEvent'].'</h1>
-                <p>Uploaded by : <b>'.$row['username'].'</b></p>
+                <p>Uploaded by : <b>'.$row['fullNameUser'].'</b></p>
             </div>
         </div>
 
         <aside>
-            <p>'.$row['tanggalEvent'].'</p>
-            <p>'.$row['lokasiEvent'].'</p>
+            <div class="ket">
+                <p>'.$row['tanggalEvent'].'</p>
+                <p>'.$row['lokasiEvent'].'</p>
+            </div>
             <h2>Ticket Category</h2>
             <div class="cat-ticket">
                 <!-- Kategori 1 -->
@@ -58,7 +71,7 @@
                         <p class="label-tix">Total</p>
                     <p class="total">'.$row['harga'].'</p>
                     </div>
-                    <a href="payment.html" class="btn">Checkout</a>
+                    <a href="payment.php?kdJenis='.$row['kdJenis'].'" class="btn">Checkout</a>
                 </div>
             </div>
         </aside>
