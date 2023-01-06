@@ -115,8 +115,10 @@
         </div>
         <div>
             <h4>Follow us</h4>
-            <a href="" class="btn-socmed">Instagram</a>
-            <a href="" class="btn-socmed">Youtube</a>
+            <div>
+                <a href="" class="btn-socmed">Instagram</a>
+                <a href="" class="btn-socmed">Youtube</a>
+            </div>
         </div>
     </footer>
 </body>
