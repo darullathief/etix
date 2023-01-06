@@ -165,17 +165,24 @@ footer a{
     border-radius: 10px;
 }
 
+.menu-item{
+    display:flex;
+}
+
 .navitem{
     text-decoration: none;
     color: white;
     font-size: 18px;
     margin: 0 10px;
+    display:flex;
+    align-items:center;
 }
 
 .navicon{
     display: inline-block;
     width: 30px;
     line-height: 30px;
+    margin: 0 4px;
 }
 
 @media only screen and (max-width: 768px){
@@ -318,5 +325,17 @@ footer a{
         width: 100%;
         margin-top: 15px;
         align-items: center;
+    }
+
+    footer div:nth-child(5) div{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 15px;
+        align-items: center;
+    }
+    
+    footer div:nth-child(5) div a{
+        margin: 0 10px;
     }
 }

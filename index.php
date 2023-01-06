@@ -38,6 +38,7 @@ function show($k){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page/Home Page</title>
     <link rel="stylesheet" href="style/style_landingpage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
     <nav>
@@ -95,36 +96,52 @@ function show($k){
         </div>
     </div>
     <div class="container">
-        <div class="card">
-            <img class="imgcard" src="img/sportcard.jpeg" alt="Sport">
-            <div class="intro">
-                <h2> <b> Sports</b> Fifa World Cup 2022 </h2>
-                <p> 20th December 2022</p>
+        <div class="slider-container" id="card1">
+        <a href="#card1" class="slide"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+            <div class="card">
+                <img class="imgcard" src="img/sportcard.jpeg" alt="Sport">
+                <div class="intro">
+                    <h2> <b> Sports</b> Fifa World Cup 2022 </h2>
+                    <p> 20th December 2022</p>
+                </div>
             </div>
+            <a href="#card2" class="slide"><span class="material-symbols-outlined">arrow_forward_ios</span></a>
         </div>
 
-        <div class="card">
-            <img class="imgcard" src="img/theatercard.jpeg" alt="Theate">
-            <div class="intro">
-                <h2> <b> Theater</b> Into the Red Velvet World </h2>
-                <p> 1st January 2022</p>
+        <div class="slider-container" id="card2">
+            <a href="#card1" class="slide"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+            <div class="card">
+                <img class="imgcard" src="img/theatercard.jpeg" alt="Theate">
+                <div class="intro">
+                    <h2> <b> Theater</b> Into the Red Velvet World </h2>
+                    <p> 1st January 2022</p>
+                </div>
             </div>
+            <a href="#card3" class="slide"><span class="material-symbols-outlined">arrow_forward_ios</span></a>
         </div>
 
-        <div class="card">
-            <img class="imgcard" src="img/musiccard.jpeg" alt="Music">
-            <div class="intro">
-                <h2> <b> Music</b> Born Pink World Tour </h2>
-                <p> 10th December 2022</p>
+        <div class="slider-container" id="card3">
+        <a href="#card2" class="slide"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+            <div class="card">
+                <img class="imgcard" src="img/musiccard.jpeg" alt="Music">
+                <div class="intro" >
+                    <h2> <b> Music</b> Born Pink World Tour </h2>
+                    <p> 10th December 2022</p>
+                </div>
             </div>
+            <a href="#card4" class="slide"><span class="material-symbols-outlined">arrow_forward_ios</span></a>
         </div>
 
-        <div class="card">
-            <img class="imgcard" src="img/theater2card.jpeg" alt="Music">
-            <div class="intro">
-                <h2> <b> Theater</b> Willy Wonka Indonesia </h2>
-                <p> 22 May 2023</p>
+        <div class="slider-container" id="card4">
+        <a href="#card3" class="slide"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+            <div class="card">
+                <img class="imgcard" src="img/theater2card.jpeg" alt="Music">
+                <div class="intro">
+                    <h2> <b> Theater</b> Willy Wonka Indonesia </h2>
+                    <p> 22 May 2023</p>
+                </div>
             </div>
+            <a href="#card4" class="slide"><span class="material-symbols-outlined">arrow_forward_ios</span></a>
         </div>
     </div>
 
@@ -227,8 +244,10 @@ function show($k){
         </div>
         <div>
             <h4>Follow us</h4>
-            <a href="" class="btn-socmed">Instagram</a>
-            <a href="" class="btn-socmed">Youtube</a>
+            <div>
+                <a href="" class="btn-socmed">Instagram</a>
+                <a href="" class="btn-socmed">Youtube</a>
+            </div>
         </div>
     </footer>
 

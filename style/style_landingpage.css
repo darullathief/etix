@@ -62,7 +62,7 @@ input[type=text] {
     background-position: 5px 5px;
     background-size: 30px; 
     background-repeat: no-repeat;
-    background-image: url('/img/searchicon.png');
+    background-image: url('../img/searchicon.png');
     padding: 12px 20px 12px 40px;
     display: block;
     margin:auto;
@@ -175,6 +175,11 @@ input[type=submit] {
     border-radius: 15px ;
 }
 
+.card2:hover{
+    position: relative;
+    top: -10px;
+}
+
 .card2 p{
     position: relative;
     z-index: 4;
@@ -217,6 +222,7 @@ input[type=submit] {
     display:flex;
     justify-content: center;
     overflow: hidden;
+    padding: 20px 0;
 }
 .cardticket{
     background-color: #D9D9D9;
@@ -227,6 +233,12 @@ input[type=submit] {
     height: 415px;
     margin: 0 20px;
     box-shadow: 5px 5px 20px black;
+}
+
+.cardticket:hover{
+    position: relative;
+    background-color: #C4C4C4;
+    top: -10px;
 }
 
 .imgticket{
@@ -346,17 +358,24 @@ a {
     line-height: 40px;
 }
 
+.menu-item{
+    display:flex;
+}
+
 .navitem{
     text-decoration: none;
     color: white;
     font-size: 18px;
     margin: 0 10px;
+    display:flex;
+    align-items:center;
 }
 
 .navicon{
     display: inline-block;
     width: 30px;
     line-height: 30px;
+    margin: 0 4px;
 }
 
 #hamburger{
@@ -424,6 +443,11 @@ a {
         margin: 10px 0;
     }
 
+    .topselling{
+        justify-content: flex-start;
+        overflow-x:scroll;
+    }
+
     .jualticket{
         flex-direction: column;
     }
@@ -478,13 +502,30 @@ a {
 
     .container{
         display: grid;
-        grid-template-columns: 40% 40%;
+        grid-template-columns: 100vw 100vw 100vw 100vw;
         grid-gap: 15px;
         font-size: 0.7em;
+        justify-content: flex-start;
+        overflow: hidden;
+        scroll-behavior: smooth;
+        transition: all .8s ease-in-out;
+    }
+
+    .slider-container{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .slide{
+        color: white;
     }
 
     .card{
-        margin: 20px 0;
+        width: 60%;
+        margin: auto 10px;
+        transition: steps .5s ease-in-out;
     }
 
     .subtulisan1{
@@ -534,39 +575,39 @@ a {
         transition: transform 0.4s ease-in-out;
       }
     
-      .hamburger-lines .line2 {
+    .hamburger-lines .line2 {
         transition: transform 0.2s ease-in-out;
       }
     
-      .hamburger-lines .line3 {
+    .hamburger-lines .line3 {
         transform-origin: 0% 100%;
         transition: transform 0.4s ease-in-out;
       }
         
-        input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    #hamburger:checked ~ .hamburger-lines .line1 {
         transform: rotate(35deg);
-      }
+    }
     
-      input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    #hamburger:checked ~ .hamburger-lines .line2 {
         transform: scaleY(0);
-      }
+    }
     
-      input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
-            transform: rotate(-35deg);
-      }
+    #hamburger:checked ~ .hamburger-lines .line3 {
+        transform: rotate(-35deg);
+    }
     
-      .menu-item{
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            background-color: #2E1452;
-            padding-left: 20px;
-            padding-top: 40px;
-            top: 350px;
-            right: -270px;
-            height: 100vh;
-            width: 250px;
-            transition: all .8s ease-in-out;
+    .menu-item{
+        display: flex;
+        flex-direction: column;
+       position: relative;
+       background-color: #2E1452;
+        padding-left: 20px;
+        padding-top: 40px;
+        top: 350px;
+        right: -270px;
+        height: 100vh;
+        width: 250px;
+        transition: all .8s ease-in-out;
     }
 
 
@@ -625,6 +666,18 @@ a {
         width: 100%;
         margin-top: 15px;
         align-items: center;
+    }
+
+    footer div:nth-child(5) div{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 15px;
+        align-items: center;
+    }
+    
+    footer div:nth-child(5) div a{
+        margin: 0 10px;
     }
 
 }
