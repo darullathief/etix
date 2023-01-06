@@ -128,9 +128,21 @@ input[type=submit] {
     border-radius: 15px;
 }
 
+.container{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 30px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider-container{
+    width: 20%;
+    margin: 50px;
+}
+
 .card{
     width: 100%;
-    margin: 50px;
     box-shadow: 5px 5px 20px black;
     overflow: hidden;
     background-color: white;
@@ -147,11 +159,6 @@ input[type=submit] {
 }
 
 
-.container{
-    display: flex;
-    justify-content: space-around;
-    padding: 0 30px ;
-}
 
 .subtulisan1{
     text-align:left;
@@ -386,6 +393,10 @@ a {
     display: none;
 }
 
+.slide{
+    display: none;
+}
+
 @media only screen and (max-width: 768px) {
     .typography1 h1{
         font-size: 56px;
@@ -425,9 +436,14 @@ a {
         padding: 0 30px;
         place-items: center;
     }
+
+    .slider-container{
+        width: 80%;
+        margin: 0;
+    }
     
     .card{
-        width: 80%;
+        width: 100%;
         margin: 20px 0;
     }
 
@@ -519,6 +535,7 @@ a {
     }
     
     .slide{
+        display: block;
         color: white;
     }
 
