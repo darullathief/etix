@@ -50,7 +50,7 @@
                     </tr>
                     ";
 
-                    while ($r= mysqli_fetch_assoc($result) ) {
+                    foreach ($rows as $r) {
                         echo"
                         <tr>
                         <td><img src= 'upload/".$r['poster']."' alt='bornpink' class='bp'></td>
