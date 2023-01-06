@@ -16,11 +16,25 @@
      <div class="container">
         <div class="sidebar">
             <div class="file">
-                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="gambar1">
+        <?php
+        require "script/conn.php";
+        $username   = $_COOKIE['user_name'];
+        $query      = "select * from user where username ='$username'";
+        $result     = mysqli_query ($conn, $query);
+
+        $rows= [];
+
+        while ($row = mysqli_fetch_assoc($result)) {
+            $rows[] = $row;
+        }
+        foreach ($rows as $r) {
+            echo
+               '<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="gambar1">
                 <div class="username">
-                    <p>@selsyaanz</p>
-                    <p class="fullname"><b>Selsya Nabila R</b></p>
-                </div>
+                    <p>@'.$r['username'].'</p>
+                    <p class="fullname"><b>'.$r['fullNameUser'].'</b></p>
+                </div> ';}
+                ?>
             </div>
             <ul>
                 <li><a href="profile.html"><img src="icon/PROFILE.png" class="navicon"><span class="nav-link">Profile</span></a></li>
@@ -33,25 +47,32 @@
         <h2>Profile</h2>
         <div class="form">
             <form action="" >
-                <label for="">Email</label>
-                <input type="text" placeholder="Email">
+
+            <?php
+                foreach ($rows as $r) {
+                    echo 
+
+                '<label for="">Email</label>
+                <input type="text" placeholder="Email" value='.$r['email'].'>
                 <label for="">Username</label>
-                <input type="text" placeholder="Username (@)">
+                <input type="text" placeholder="Username (@)" value='.$r['username'].'>
                 <label for="">Name</label>
-                <input type="text" placeholder="Full name">
+                <input type="text" placeholder="Full name" value='.$r['fullNameUser'].'>
                 <label for="">Date of Birth</label>
                 <div class="birth-data">
-                    <input type="text" placeholder="Day">
-                    <input type="text" placeholder="Month">
-                    <input type="text" placeholder="Year">
+                    <input type="text" placeholder="Day" value='.$r['Day'].'>
+                    <input type="text" placeholder="Month" value='.$r['Month'].'>
+                    <input type="text" placeholder="Year" value='.$r['Year'].'>
                 </div>
                 <label for="">Phone Number</label>
                 <input type="text" placeholder="Phone Number (+62)">
                 <label for="">Address</label>
                 <input type="text" placeholder="Full Address">
                 <hr>
-                <input type="submit" value="Update Profile" class="yellow">
-            </form>
+                <input type="submit" value="Update Profile" class="yellow"> ';}
+
+                ?>
+            </form> 
      </div>
      </div>
      </div>

@@ -54,7 +54,7 @@ function show($k){
                 <a href="payment_history.php" class="navitem"><img src="icon/TRANSACTION.png" class="navicon"><span>Transaction</span></a>
                 <a href="event_management.php" class="navitem"><img src="icon/MYEVENT.png" class="navicon"><span>My Event</span></a>
                 <a href="myticket.php" class="navitem"><img src="icon/MYTICKET.png" class="navicon"><span>My Ticket</span></a>
-                <a href="profile.html" class="navitem"><img src="icon/PROFILE.png" class="navicon"><span>Profile</span></a>
+                <a href="profile.php" class="navitem"><img src="icon/PROFILE.png" class="navicon"><span>Profile</span></a>
             </div>
         </div>
     </nav>
