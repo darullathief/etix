@@ -20,7 +20,7 @@ nav{
 
 nav .logo {
     width: 70px;
-    margin: 0 30px;
+    margin: 10px 20px;
 }
 
 .container {
@@ -105,9 +105,18 @@ td,th{
     text-align: center;
 }
 
+.package {
+    text-align: center;
+}
 
 @media screen and (max-width: 600px) {
     
+
+ nav .logo {
+    width: 15%;
+    margin-top: 5px;
+    margin-left: 15px;
+ }
 
 aside {
     display: none;
@@ -129,7 +138,7 @@ aside {
 }
 
 .ticket {
-    margin-left: 25px;
+    margin-left: 15px;
     width: 150%;
     font-size: 75%;
 }
