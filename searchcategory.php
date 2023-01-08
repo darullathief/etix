@@ -74,14 +74,11 @@
 <br>
 <div class="bodytengah">
       
-        <br>
-        <br>
-
-        <div class="subsubtulisan2a">
+        <!-- <div class="topselling">
             <img src="icon/iconsport.png" class="icon">
                 <p> <?php show($kategori);?> </p>
-        </div>
-        <!-- <br>
+        </div>  -->
+         <br>
         <div class="topselling">
             <div class="cardticket">
                 <img class="imgticket" src="https://s1.ticketm.net/tm/en-us/img/static/superbowl/23/super-bowl-tile-2023.jpg" alt="Ticket">
@@ -123,7 +120,7 @@
                         <p> Rp 750.000</p>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
             <br>
 
