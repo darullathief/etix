@@ -66,7 +66,7 @@ function show($k){
         </div>
 
         <div class="formsearch">
-            <form> 
+            <form action = "searchingpage.html"> 
                 <input type="text" name="Search for artist or event" placeholder="Search for artist or event...">
                 <input type="submit" value="Search" class="btn btn-search">
             </form>
