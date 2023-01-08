@@ -7,9 +7,13 @@ $result = mysqli_query($conn, $query);
 $result2 = mysqli_query($conn, $query2);
 
 $rows = [];
+$rows2 = [];
 
 while ($row = mysqli_fetch_assoc($result)) {
     $rows[] = $row;
+}
+while ($row = mysqli_fetch_assoc($result2)) {
+    $rows2[] = $row;
 }
 
 ?>
@@ -54,15 +58,24 @@ while ($row = mysqli_fetch_assoc($result)) {
                     <input type="text" name="lokasiEvent" placeholder="Event Location" class="fl" value ="'.$r["lokasiEvent"].'">
                     <input type="date" name="tanggalEvent" class="fr" value ="'.$r["tanggalEvent"].'">';
 
-                    do{
-                        echo' <div class=inputan>
-                            <input type="text" name="kdJenis" style="display: none;" value="'.$row['kdJenis'].'">
-                            <input type="text" name="jenisTiket" placeholder="Ticket Category" class="tl" value="'.$row['jenisTiket'].'">
-                            <input type="text" name="harga" placeholder="Price" class="tc" value="'.$row['harga'].'">
-                            <input type="text" name="kapasitasTiket" placeholder="Amount" class="tr" value="'.$row['kapasitasTiket'].'">
-                            </div>'
-                            ;
-                    } while ($row = mysqli_fetch_assoc($result2));
+                        if (count($rows2) > 0) {
+                            foreach ($rows2 as $r2) {
+                                echo' 
+                                    <input type="text" name="kdJenis" style="display: none;" value="'.$r2['kdJenis'].'">
+                                    <input type="text" name="jenisTiket" placeholder="Ticket Category" class="tl" value="'.$r2['jenisTiket'].'">
+                                    <input type="text" name="harga" placeholder="Price" class="tc" value="'.$r2['harga'].'">
+                                    <input type="text" name="kapasitasTiket" placeholder="Amount" class="tr" value="'.$r2['kapasitasTiket'].'">
+                                    ';
+                                }
+                        } else{
+                            echo' 
+                                    <input type="text" name="jenisTiket" placeholder="Ticket Category" class="tl" value="">
+                                    <input type="text" name="harga" placeholder="Price" class="tc" value="">
+                                    <input type="text" name="kapasitasTiket" placeholder="Amount" class="tr" value="">
+                                    ';
+                        }
+                        
+                        }
                    
                     echo'
                     <div class="fileup">
@@ -70,7 +83,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                         <input type="file" name="poster" id="" value"'.$r["poster"].'"></div>
                     
                     <textarea name="deskripsi" placeholder="Description" cols="5" rows="10">'.$r["deskripsi"].'</textarea>';
-                }?>
+                ?>
                 <div class="save">
                     <a href="event_management.html" class="btn-cancel">Cancel</a>
                     <input type="submit" class="btn-save" value="Save">

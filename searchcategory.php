@@ -1,16 +1,16 @@
 <?php
     $kategori= $_GET['kategori'];
 
-    //if($kategori= "Arts"){
-        //$kategori = "Arts & Theatre";
-    //} else{
-       // $kategori= $_GET['kategori'];
-    //}
+    if($kategori == "Arts"){
+        $kategori = "Arts & Theatre";
+    } else{
+        $kategori= $_GET['kategori'];
+    }
+    echo $kategori;
         function show($k){
             require 'script/conn.php';
-            $query = "select * from vevent where kategoriEvent = '$k' &&  statusEvent='On Sale' 
-            group by kdevent 
-            ";
+            $query = "select * from vEvent where kategoriEvent = '$k' &&  statusEvent='On Sale' 
+            group by kdevent ";
             $result = mysqli_query($conn, $query);
 
             while ($row = mysqli_fetch_assoc($result) ){
@@ -56,10 +56,10 @@
 
 
         <div>
-            <a href="payment_history.html" class="navitem">Transaction</a>
-            <a href="event_management.php" class="navitem">My Event</a>
-            <a href="myticket.html" class="navitem">My Ticket</a>
-            <a href="profile.html" class="navitem">Profile</a>
+            <a href="payment_history.html" class="navitem"><img src="icon/TRANSACTION.png" class="navicon">Transaction</a>
+            <a href="event_management.php" class="navitem"><img src="icon/MYEVENT.png" class="navicon">My Event</a>
+            <a href="myticket.html" class="navitem"><img src="icon/MYTICKET.png" class="navicon">My Ticket</a>
+            <a href="profile.html" class="navitem"><img src="icon/PROFILE.png" class="navicon">Profile</a>
         </div>
     </nav>
     <div class="pencarian">
@@ -74,14 +74,11 @@
 <br>
 <div class="bodytengah">
       
-        <br>
-        <br>
-
-        <div class="subsubtulisan2a">
+        <!-- <div class="topselling">
             <img src="icon/iconsport.png" class="icon">
-                <p> <?php echo $kategori;?> </p>
-        </div>
-        <br>
+                <p> <?php show($kategori);?> </p>
+        </div>  -->
+         <br>
         <div class="topselling">
             <div class="cardticket">
                 <img class="imgticket" src="https://s1.ticketm.net/tm/en-us/img/static/superbowl/23/super-bowl-tile-2023.jpg" alt="Ticket">

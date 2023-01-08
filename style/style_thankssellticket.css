@@ -126,12 +126,14 @@ aside{
 
 /* Payment */
 
+
 footer {
     display: flex;
     justify-content: space-around;
     background-color: #2E1452;
     padding: 15px 0 40px;
     margin-top: 40px;
+    flex-wrap: wrap;
 }
 
 ul{
@@ -206,10 +208,20 @@ footer a{
     font-variant-caps:all-petite-caps;
     
 }
+.navitem{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.navicon{
+    display: inline-block;
+    width: 30px;
+    line-height: 30px;
+}
 
 @media screen and (max-width: 600px) {
-  
-
     .typography1 {
         width: 100%;
         order: 2;
@@ -252,7 +264,20 @@ footer a{
         margin: auto;
         justify-content: center;
     }
-    
 
+
+    footer div{
+        min-width: 40%;
+        text-align: center;
+        margin-top: 15px;
+    }
     
+    footer div:nth-child(5){
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 15px;
+        align-items: center;
+    }
  }

@@ -5,8 +5,7 @@ if(!isset($_COOKIE['user_name'])) {
         
 function show($k){
     require 'script/conn.php';
-    $query = "select * from vevent where kategoriEvent = '$k' &&  statusEvent='On Sale' 
-        group by kdevent 
+    $query = "select * from vevent where kategoriEvent = '$k' group by kdevent 
         limit 3";
         $result = mysqli_query($conn, $query);
 
@@ -39,15 +38,24 @@ function show($k){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page/Home Page</title>
     <link rel="stylesheet" href="style/style_landingpage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
     <nav>
-        <a href="index.php"><img src="img/ETIX LOGO.png" class="logo" alt="logo"></a>
-        <div>
-            <a href="payment_history.html" class="navitem">Transaction</a>
-            <a href="event_management.php" class="navitem">My Event</a>
-            <a href="myticket.html" class="navitem">My Ticket</a>
-            <a href="profile.html" class="navitem">Profile</a>
+        <a href="landingpage.html"><img src="img/ETIX LOGO.png" class="logo" alt="logo"></a>
+            <div>
+            <input type="checkbox" id="hamburger">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <div class="menu-item">
+                <a href="payment_history.php" class="navitem"><img src="icon/TRANSACTION.png" class="navicon"><span>Transaction</span></a>
+                <a href="event_management.php" class="navitem"><img src="icon/MYEVENT.png" class="navicon"><span>My Event</span></a>
+                <a href="myticket.php" class="navitem"><img src="icon/MYTICKET.png" class="navicon"><span>My Ticket</span></a>
+                <a href="profile.php" class="navitem"><img src="icon/PROFILE.png" class="navicon"><span>Profile</span></a>
+            </div>
         </div>
     </nav>
         <div class="typography1">
@@ -58,9 +66,9 @@ function show($k){
         </div>
 
         <div class="formsearch">
-            <form> 
+            <form action = "searchingpage.html"> 
                 <input type="text" name="Search for artist or event" placeholder="Search for artist or event...">
-                <input type="submit" value="Search" class="btn">
+                <input type="submit" value="Search" class="btn btn-search">
             </form>
         </div> 
 
@@ -73,10 +81,12 @@ function show($k){
     </div>
 
         <div class="tulisangambar1">
-            <h2> Born Pink Sale up to
-                <br> 50% for new user! </h2>
-            <p> Get this sale by sign
-               <br> in to your account. </p>
+            <div>
+                <h2> Born Pink Sale up to
+                    <br> 50% for new user! </h2>
+                <p> Get this sale by sign
+                <br> in to your account. </p>
+            </div>
             <img src="img/bpink.jpeg">
         </div>
     </div>
@@ -86,36 +96,52 @@ function show($k){
         </div>
     </div>
     <div class="container">
-        <div class="card">
-            <img class="imgcard" src="img/sportcard.jpeg" alt="Sport">
-            <div class="intro">
-                <h2> <b> Sports</b> Fifa World Cup 2022 </h2>
-                <p> 20th December 2022</p>
+        <div class="slider-container" id="card1">
+        <a href="#card1" class="slide"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+            <div class="card">
+                <img class="imgcard" src="img/sportcard.jpeg" alt="Sport">
+                <div class="intro">
+                    <h2> <b> Sports</b> Fifa World Cup 2022 </h2>
+                    <p> 20th December 2022</p>
+                </div>
             </div>
+            <a href="#card2" class="slide"><span class="material-symbols-outlined">arrow_forward_ios</span></a>
         </div>
 
-        <div class="card">
-            <img class="imgcard" src="img/theatercard.jpeg" alt="Theate">
-            <div class="intro">
-                <h2> <b> Theater</b> Into the Red Velvet World </h2>
-                <p> 1st January 2022</p>
+        <div class="slider-container" id="card2">
+            <a href="#card1" class="slide"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+            <div class="card">
+                <img class="imgcard" src="img/theatercard.jpeg" alt="Theate">
+                <div class="intro">
+                    <h2> <b> Theater</b> Into the Red Velvet World </h2>
+                    <p> 1st January 2022</p>
+                </div>
             </div>
+            <a href="#card3" class="slide"><span class="material-symbols-outlined">arrow_forward_ios</span></a>
         </div>
 
-        <div class="card">
-            <img class="imgcard" src="img/musiccard.jpeg" alt="Music">
-            <div class="intro">
-                <h2> <b> Music</b> Born Pink World Tour </h2>
-                <p> 10th December 2022</p>
+        <div class="slider-container" id="card3">
+        <a href="#card2" class="slide"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+            <div class="card">
+                <img class="imgcard" src="img/musiccard.jpeg" alt="Music">
+                <div class="intro" >
+                    <h2> <b> Music</b> Born Pink World Tour </h2>
+                    <p> 10th December 2022</p>
+                </div>
             </div>
+            <a href="#card4" class="slide"><span class="material-symbols-outlined">arrow_forward_ios</span></a>
         </div>
 
-        <div class="card">
-            <img class="imgcard" src="img/theater2card.jpeg" alt="Music">
-            <div class="intro">
-                <h2> <b> Theater</b> Willy Wonka Indonesia </h2>
-                <p> 22 May 2023</p>
+        <div class="slider-container" id="card4">
+        <a href="#card3" class="slide"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+            <div class="card">
+                <img class="imgcard" src="img/theater2card.jpeg" alt="Music">
+                <div class="intro">
+                    <h2> <b> Theater</b> Willy Wonka Indonesia </h2>
+                    <p> 22 May 2023</p>
+                </div>
             </div>
+            <a href="#card4" class="slide"><span class="material-symbols-outlined">arrow_forward_ios</span></a>
         </div>
     </div>
 
@@ -125,19 +151,19 @@ function show($k){
         </div>
 
         <div class="container2">
-            <a href="searchcategory.html?kategori=Music">
+            <a href="searchcategory.php?kategori=Music">
             <div class="card2">
                 <img class="imgcard2" src="img/browsemusic.jpeg" alt="Music">
                 <p> Music Concert</p>
             </div></a>
     
-            <a href="searchcategory.html?kategori=Sport">
+            <a href="searchcategory.php?kategori=Sport">
             <div class="card2">
                 <img class="imgcard2" src="img/browsesport.jpeg" alt="Sport">
                 <p> Sports </p>
             </div></a>
     
-            <a href="searchcategory.html?kategori=Arts & Theatre">
+            <a href="searchcategory.php?kategori=Arts">
             <div class="card2">
                 <img class="imgcard2" src="img/browseart.jpeg" alt="Art">
                 <p> Arts & Theater</p></a>
@@ -218,8 +244,10 @@ function show($k){
         </div>
         <div>
             <h4>Follow us</h4>
-            <a href="" class="btn-socmed">Instagram</a>
-            <a href="" class="btn-socmed">Youtube</a>
+            <div>
+                <a href="" class="btn-socmed">Instagram</a>
+                <a href="" class="btn-socmed">Youtube</a>
+            </div>
         </div>
     </footer>
 

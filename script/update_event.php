@@ -42,12 +42,32 @@ if (mysqli_query($conn, $query1)) {
     echo"Query 1 oke";
 }  else {
     echo "Error: " . $query1 . "<br>" . mysqli_error($conn);
-  }
+}
 
 if (mysqli_query($conn, $query2)) {
-    header('Location: ../event_management.php');
+    // header('Location: ../event_management.php');
 } else {
     echo "Error: " . $query2 . "<br>" . mysqli_error($conn);
   }
 
+  $i = 1;
+  while ($i <= $kapasitasTiket) {
+      if ($i<10) {
+          $kdtiket = $kdEvent.$kdJenis."0$i";
+      } else {
+          $kdtiket = $kdEvent.$kdJenis.$i;
+      }
+      //---------------------------------------
+      $query3 = "insert into ticket values 
+        ('$kdtiket','$kdJenis','Available')";
+  
+      //---------------------------------------
+      if (mysqli_query($conn, $query3)) {
+          echo"Query 3 oke";
+      }  else {
+          echo "Error: " . $query3 . "<br>" . mysqli_error($conn);
+      }
+      $i++; 
+  }
+header('Location: ../event_management.php');
 ?>
