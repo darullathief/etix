@@ -79,7 +79,7 @@
 
         <div class="subsubtulisan2a">
             <img src="icon/iconsport.png" class="icon">
-                <p> <?php echo $kategori;?> </p>
+                <p> <?php show($kategori);?> </p>
         </div>
         <!-- <br>
         <div class="topselling">
