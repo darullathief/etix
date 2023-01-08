@@ -81,7 +81,7 @@
             <img src="icon/iconsport.png" class="icon">
                 <p> <?php echo $kategori;?> </p>
         </div>
-        <br>
+        <!-- <br>
         <div class="topselling">
             <div class="cardticket">
                 <img class="imgticket" src="https://s1.ticketm.net/tm/en-us/img/static/superbowl/23/super-bowl-tile-2023.jpg" alt="Ticket">
@@ -123,7 +123,7 @@
                         <p> Rp 750.000</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <br>
 

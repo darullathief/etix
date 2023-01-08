@@ -151,19 +151,19 @@ function show($k){
         </div>
 
         <div class="container2">
-            <a href="searchcategory.html?kategori=Music">
+            <a href="searchcategory.php?kategori=Music">
             <div class="card2">
                 <img class="imgcard2" src="img/browsemusic.jpeg" alt="Music">
                 <p> Music Concert</p>
             </div></a>
     
-            <a href="searchcategory.html?kategori=Sport">
+            <a href="searchcategory.php?kategori=Sport">
             <div class="card2">
                 <img class="imgcard2" src="img/browsesport.jpeg" alt="Sport">
                 <p> Sports </p>
             </div></a>
     
-            <a href="searchcategory.html?kategori=Arts">
+            <a href="searchcategory.php?kategori=Arts">
             <div class="card2">
                 <img class="imgcard2" src="img/browseart.jpeg" alt="Art">
                 <p> Arts & Theater</p></a>
