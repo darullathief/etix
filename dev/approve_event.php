@@ -3,7 +3,7 @@ require '../script/conn.php';
     
 $event = $_GET['kd_event'];
 $approve = $_GET['approve'];
-7
+
 if ($approve == "no") {
   $query == "Delete from event WHERE kdEvent='$event'";
 } else if ($approve == "yes"){

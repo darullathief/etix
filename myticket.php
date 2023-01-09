@@ -58,7 +58,7 @@
                         <td class='date'>".$r['tanggalEvent']."</td>
                         <td class='qty'> 1 </td>
                         <td>".$r['jenisTiket']."</td>
-                        <td>".$r['statusBayar']."></td>
+                        <td>".$r['statusBayar']."</td>
                         </tr>";
                     }
 

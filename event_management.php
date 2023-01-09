@@ -62,7 +62,7 @@
                             if ($r['statusEvent'] == "On Review") {
                                 echo '<td class="sticky sticky-status review">On Review</td>';
                             } else  if ($r['statusEvent'] == "Approved") {
-                                echo '<td class="sticky sticky-status">Approved</td>';
+                                echo '<td class="sticky sticky-status approve">Approved</td>';
                             } else if ($r['statusEvent'] == "On Sale") {
                                echo '<td class="sticky sticky-status sale">On Sale</td>';
                             }

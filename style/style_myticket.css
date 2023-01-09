@@ -32,7 +32,7 @@ nav .logo {
 
 aside {
     background-color: #2E1452;
-    height: 150vh;
+    min-height: 100%;
     width: 30vh;
 }
 
@@ -109,6 +109,11 @@ td,th{
     text-align: center;
 }
 
+table {
+    margin-left: -35px;
+}
+
+
 @media screen and (max-width: 600px) {
     
 
@@ -144,7 +149,8 @@ aside {
 }
 
 table {
-    margin: 0;
+    margin-top: 25px;
+    margin-left: 25px;
 }
 
 .qty {
