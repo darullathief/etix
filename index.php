@@ -36,7 +36,8 @@ function show($k){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page/Home Page</title>
+    <title> Home Page </title>
+    <link rel="icon" href="icon/ICON ETIX.png">
     <link rel="stylesheet" href="style/style_landingpage.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
@@ -151,7 +152,7 @@ function show($k){
         </div>
 
         <div class="container2">
-            <a href="searchcategory.php?kategori=Music">
+        <a href="searchcategory.php?kategori=Music">
             <div class="card2">
                 <img class="imgcard2" src="img/browsemusic.jpeg" alt="Music">
                 <p> Music Concert</p>

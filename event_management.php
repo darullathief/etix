@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Management</title>
+    <link rel="icon" href="icon/ICON ETIX.png">
     <link rel="stylesheet" href="style/style_em.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
@@ -22,8 +23,8 @@
         </div>
         <aside>
             <ul>
-                <li><a href="home_vendor.html">Dashboard</a></li>
-                <li><a href="event_management.html">Event Management</a></li>
+                <li><a href="dashboardevent.html">Dashboard</a></li>
+                <li><a href="event_management.php">Event Management</a></li>
             </ul>
         </aside>
         <div class="event">
