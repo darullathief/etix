@@ -137,6 +137,40 @@ h2{
     text-decoration: underline;
 }
 
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2E1452;
+    padding: 10px;
+    margin-top: 100px;
+    margin-left: px;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.btn-socmed{
+    display: block;
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    background-color: #E6CC00;
+    color: #2E1452;
+    border-radius: 10px;
+    width: 100px;
+}
+
 @media screen and (max-width: 600px) {
     
 
@@ -170,4 +204,42 @@ nav .logo {
     width: 45%;
     margin-left: 25px;
 }
+
+footer div{
+    min-width: 40%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+footer div:nth-child(5){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 15px;
+    align-items: center;
+}
+
+footer div:nth-child(5) div{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+    align-items: center;
+}
+
+footer div:nth-child(5) div a{
+    margin: 0 10px;
+}
+
+.btn-socmed{
+    display: block;
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    background-color: #E6CC00;
+    color: #2E1452;
+    border-radius: 10px;
+    width: 100px;
+}
+
 }
