@@ -74,10 +74,20 @@
 <br>
 <div class="bodytengah">
       
-        <!-- <div class="topselling">
+        <!-- <br>
+        <br>
+
+        <div class="subsubtulisan2a">
             <img src="icon/iconsport.png" class="icon">
-                <p> <?php show($kategori);?> </p>
-        </div>  -->
+                <p> <?php echo $kategori;?> </p>
+        </div>
+        <br>
+        <div class="topselling">
+            <?php show($kategori);?>
+        </div>
+
+   
+    </div> -->
          <br>
         <div class="topselling">
             <div class="cardticket">
