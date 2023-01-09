@@ -74,7 +74,7 @@
 <br>
 <div class="bodytengah">
       
-        <!-- <br>
+        <br>
         <br>
 
         <div class="subsubtulisan2a">
@@ -87,8 +87,8 @@
         </div>
 
    
-    </div> -->
-         <br>
+    </div>
+         <!-- <br>
         <div class="topselling">
             <div class="cardticket">
                 <img class="imgticket" src="https://s1.ticketm.net/tm/en-us/img/static/superbowl/23/super-bowl-tile-2023.jpg" alt="Ticket">
@@ -140,7 +140,7 @@
         </div>
 
    
-    </div>
+    </div>-->
 
     <div class="jualticket">
         <img class="vectorsell" src="img/vectorsell.png">
@@ -154,7 +154,7 @@
                     <div>
                         <a href="#" class="btn jual">Submit Your Event</a>
                     </div></div>
-         </div>
+         </div> 
 
 
     
