@@ -18,7 +18,7 @@ if ($approve == "no") {
     $query3 = "UPDATE orders SET statusBayar='Done' WHERE kdPemesanan='$kdPemesanan'";
     
     if (mysqli_query($conn, $query3)) {
-        header("Location : payment_request.php");
+        header("Location: payment_request.php");
     } else {
         echo "Error: " . $query3 . "<br>" . mysqli_error($conn);
     }

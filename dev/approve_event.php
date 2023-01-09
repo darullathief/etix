@@ -11,7 +11,7 @@ if ($approve == "no") {
 }
 
 if (mysqli_query($conn, $query)) {
-    header("Location : event_request.php");
+    header("Location: event_request.php");
   } else {
     echo "Error updating record: " . mysqli_error($conn);
   }
