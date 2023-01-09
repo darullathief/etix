@@ -27,10 +27,10 @@
                 
             </div>
             <ul>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Change Password</a></li>
-                <li><a href="#">Payment</a></li>
-                <li><a href="#">Setting</a></li>
+            <li><a href="profile.html"><img src="icon/PROFILE.png" class="navicon"><span class="nav-link">Profile</span></a></li>
+                <li><a href="#"><img src="icon/change-password.png" class="navicon"><span class="nav-link">Change Password</span></a></li>
+                <li><a href="payment_history.html"><img src="icon/TRANSACTION.png" class="navicon"><span class="nav-link">Payment History</span></a></li>
+                <li><a href="#"><img src="icon/logout.png" class="navicon"><span class="nav-link">Sign out</span></a></li>
             </ul>
         </aside>
 

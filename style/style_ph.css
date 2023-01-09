@@ -125,6 +125,13 @@ aside a:hover{
     font-weight: bold;
 }
 
+.navicon {
+    display: inline-block;
+    width: 30px;
+    margin: auto 10px;
+}
+
+
 @media screen and (max-width: 600px) {
 
 aside{
@@ -156,6 +163,23 @@ aside{
 h2 {
     margin-left: -10px;
 }
+
+.nav-link{
+    display: none;
+}
+
+li{
+    margin: 0;
+    padding: 10px;
+}
+
+a{
+    margin: auto;
+}
+.navicon{
+    width: 50px;
+}
+
 
 }
 
