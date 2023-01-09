@@ -40,7 +40,7 @@
                 <li><a href="profile.html"><img src="icon/PROFILE.png" class="navicon"><span class="nav-link">Profile</span></a></li>
                 <li><a href="#"><img src="icon/change-password.png" class="navicon"><span class="nav-link">Change Password</span></a></li>
                 <li><a href="payment_history.html"><img src="icon/TRANSACTION.png" class="navicon"><span class="nav-link">Payment History</span></a></li>
-                <li><a href="#"><img src="icon/setting.png" class="navicon"><span class="nav-link">Settings</span></a></li>
+                <li><a href="#"><img src="icon/logout.png" class="navicon"><span class="nav-link">Sign out</span></a></li>
             </ul>
         </div>
         <div class="biodata">
