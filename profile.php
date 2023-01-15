@@ -11,7 +11,7 @@
 </head>
 <body>
     <nav>
-    <img src="img/ETIX LOGO.png" alt="logo" class="logo">
+    <a href="index.php"><img src="img/ETIX LOGO.png" alt="logo" class="logo"></a>
      </nav>
      <div class="container">
         <div class="sidebar">
@@ -37,9 +37,9 @@
                 ?>
             </div>
             <ul>
-                <li><a href="profile.html"><img src="icon/PROFILE.png" class="navicon"><span class="nav-link">Profile</span></a></li>
+                <li><a href="profile.php"><img src="icon/PROFILE.png" class="navicon"><span class="nav-link">Profile</span></a></li>
                 <li><a href="#"><img src="icon/change-password.png" class="navicon"><span class="nav-link">Change Password</span></a></li>
-                <li><a href="payment_history.html"><img src="icon/TRANSACTION.png" class="navicon"><span class="nav-link">Payment History</span></a></li>
+                <li><a href="payment_history.php"><img src="icon/TRANSACTION.png" class="navicon"><span class="nav-link">Payment History</span></a></li>
                 <li><a href="#"><img src="icon/logout.png" class="navicon"><span class="nav-link">Sign out</span></a></li>
             </ul>
         </div>

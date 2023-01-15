@@ -521,6 +521,7 @@ a {
         grid-template-columns: 100vw 100vw 100vw 100vw;
         grid-gap: 15px;
         font-size: 0.7em;
+        padding: 0;
         justify-content: flex-start;
         overflow: hidden;
         scroll-behavior: smooth;
@@ -566,6 +567,7 @@ a {
         display: grid;
         grid-template-columns: 100%;
         grid-gap: 20px;
+        overflow-x: hidden;
     }
 
     .subtulisan2{
@@ -614,10 +616,10 @@ a {
     }
     
     .menu-item{
-        display: flex;
+        display: inline;
         flex-direction: column;
-       position: relative;
-       background-color: #2E1452;
+        position: relative;
+        background-color: #2E1452;
         padding-left: 20px;
         padding-top: 40px;
         top: 380px;

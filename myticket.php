@@ -13,7 +13,7 @@
 </head>
 <body>
     <nav>
-        <img src="img/etixlogo.png"  class="logo">
+    <a href="index.php"><img src="img/etixlogo.png"  class="logo"></a>
     </nav>
     <div class="container">
         <aside>

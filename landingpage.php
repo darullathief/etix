@@ -1,8 +1,4 @@
-<?php
-if(!isset($_COOKIE['user_name'])) {
-    header("Location: landingpage.php");
-  }
-        
+<?php    
 function show($k){
     require 'script/conn.php';
     $query = "select * from vevent where kategoriEvent = '$k' group by kdevent 
@@ -29,37 +25,27 @@ function show($k){
         }
     }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Home Page </title>
-    <link rel="icon" href="icon/ICON ETIX.png">
+    <title>Landing Page/Home Page</title>
     <link rel="stylesheet" href="style/style_landingpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
     <nav>
-        <a href="landingpage.html"><img src="img/ETIX LOGO.png" class="logo" alt="logo"></a>
-            <div>
-            <input type="checkbox" id="hamburger">
-            <div class="hamburger-lines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
-            </div>
-            <div class="menu-item">
-                <a href="payment_history.php" class="navitem"><img src="icon/TRANSACTION.png" class="navicon"><span>Transaction</span></a>
-                <a href="event_management.php" class="navitem"><img src="icon/MYEVENT.png" class="navicon"><span>My Event</span></a>
-                <a href="myticket.php" class="navitem"><img src="icon/MYTICKET.png" class="navicon"><span>My Ticket</span></a>
-                <a href="profile.php" class="navitem"><img src="icon/PROFILE.png" class="navicon"><span>Profile</span></a>
-            </div>
+        <a href="index.php"><img src="img/ETIX LOGO.png" class="logo" alt="logo"></a>
+        <div>
+            <a href="login.html" class="btn">Login</a>
+            <a href="login.html" class="btn">Register</a>
         </div>
     </nav>
-        <div class="typography1">
+    <div class="typography1">
             <div>
                 <h1> LET'S GET START , <br>
                 FIND YOUR <span class="warnafont"> TICKET! </span></h1>
