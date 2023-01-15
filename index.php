@@ -43,7 +43,7 @@ function show($k){
 </head>
 <body>
     <nav>
-        <a href="landingpage.html"><img src="img/ETIX LOGO.png" class="logo" alt="logo"></a>
+        <a href="index.php"><img src="img/ETIX LOGO.png" class="logo" alt="logo"></a>
             <div>
             <input type="checkbox" id="hamburger">
             <div class="hamburger-lines">
